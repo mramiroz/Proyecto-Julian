@@ -1,6 +1,7 @@
 # 1. Descripción del problema a resolver
 
-- Queremos hacer la vida de las personas que compran en el supermercado mucho más fácil. Vamos a crear una Aplicación web que permita a la gente registrarse, entrar a su cuenta, elegir y comprar productos, ver lo que tienen en su carrito, pagar por sus compras y mirar lo que han comprado antes.
+Queremos hacer la vida de las personas que compran en el supermercado mucho más fácil. Vamos a crear una Aplicación web que permita a la gente registrarse, entrar a su cuenta, elegir y comprar productos, ver lo que tienen en su carrito, pagar por sus compras y mirar lo que han comprado antes.
+
 ---
 
 
