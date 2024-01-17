@@ -27,6 +27,11 @@
 
 - Realizado Caso.md
 - Realizado Diagrama.md
+---
+
+**Versión 1.2**
+
+- Realizo cambio Descripcion.md
   
   ---
 
