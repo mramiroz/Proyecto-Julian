@@ -19,3 +19,5 @@ if (¿Tiene la sesión iniciada?) then (True)
   :Compra completada;
 stop
 @enduml
+
+[Volver](Proyecto.md)
