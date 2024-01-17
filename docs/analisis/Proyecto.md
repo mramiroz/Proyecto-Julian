@@ -8,17 +8,25 @@
     - Alexandru Sava.
     - Christian Canaza 
 ---
-## Version
-- Verison 1.0
+## Versión
+
+- Versión 1.1
 
 ---
 ### Control de cambios
 
-**Verion 1.0**
+**Versión 1.0**
 
 - Realizado Descripcion.md
 - Realizado Estudio.md
 - Realizado Requisitos.md
+  
+  ---
+
+**Versión 1.1**
+
+- Realizado Caso.md
+- Realizado Diagrama.md
   
   ---
 
