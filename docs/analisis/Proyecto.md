@@ -45,6 +45,7 @@
 **Versión 1.4**
 
 - Correciones en Caso.md y Requisitos.md
+- Diagrama.md actualizado
   
   ---
 
