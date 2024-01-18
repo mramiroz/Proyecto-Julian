@@ -27,11 +27,18 @@
 
 - Realizado Caso.md
 - Realizado Diagrama.md
----
+
+  ---
 
 **Versión 1.2**
 
 - Realizo cambio Descripcion.md
+  
+  ---
+
+**Versión 1.3**
+
+- Correciones en Caso.md y Requisitos.md
   
   ---
 
