@@ -49,6 +49,11 @@
   
   ---
 
+**Versión 1.5**
+
+- Correción Diagrama.md
+- Correción Requisitos.md
+
 # Índice de Contenido
 
 1. [Descripción del problema a resolver](Descripcion.md)
