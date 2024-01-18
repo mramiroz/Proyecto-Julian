@@ -6,22 +6,14 @@ left to right direction
 
 rectangle Supermercado {
     usecase "Buscar productos" as UC1
-    usecase "Inspeccionar producto" as UC2
-    usecase "Comprar productos" as UC3
-    usecase "Crear producto" as UC4
-    usecase "Publicar productos" as UC5
-    usecase "Ocultar productos" as UC6
-    usecase "Cambiar información producto" as UC7
+    usecase "Comprar productos" as UC2
+    usecase "Gestionar productos" as UC3
 }
 
 CLNA <|-- CLA
 CLNA <|-- AD
 CLNA -- UC1
-CLNA -- UC2
-CLA -- UC3
-AD -- UC4
-AD -- UC5
-AD -- UC6
-AD -- UC7
+CLA -- UC2
+AD -- UC3
 
 @enduml
