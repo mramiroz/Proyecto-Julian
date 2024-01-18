@@ -9,29 +9,14 @@
    al nombre introducido.
    - Asegurar que los resultados ofrecidos son relevantes.
 
-2. **Inspeccionar producto:**
-   - Mostrar información significativa del producto.
-   - Organizar los datos de manera coherente.
-
-3. **Comprar:**
+2. **Comprar productos:**
    - Proporcionar un proceso de pago de los productos sólido y entendible.
    - Ofrecer la información de compra (ticket) correspondiente.
 
-4. **Crear producto:**
-   - El administrador debe poder establecer productos nuevos.
-   - En la creación deben detallarse los datos más importantes del producto, como la id(unica), el nombre, el precio, la fecha de caducidad (puede ser nunca) o la descripción.
+3. **Gestionar productos:**
+   - Será una página para que los administradores del supermercado puedan gestionar los productos.
+   - Permitir a los administradores añadir, editar y eliminar productos.
 
-5. **Publicar productos:**
-   - El administrador puede publicar productos para hacerlos visibles y accesibles a todo el mundo que entre en el supermercado.
-
-6. **Ocultar productos:**
-   - El administrador puede ocultar productos para hacerlos visibles y accesibles solo por el propio administrador.
-   - Los productos ocultos no pueden ser vistos ni accesibles por los clientes.
-
-7. **Cambiar información producto:**
-   - Los detalles del producto pueden ser modificados por el administrador.
-   - Deben tener contenido los datos más importantes, como la id (única), el nombre, el precio, la fecha de caducidad (puede ser nunca) o la descripción. 
-     
 <!--8. **Historial de Compras:**
    - Mostrar a la gente una lista de todo lo que han comprado antes.
    - Hacer que sea fácil repetir una compra que ya hicieron.
