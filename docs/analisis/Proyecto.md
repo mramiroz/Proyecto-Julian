@@ -10,7 +10,7 @@
 ---
 ## Versión
 
-- Versión 1.3
+- Versión 1.6
 
 ---
 ### Control de cambios
@@ -54,6 +54,12 @@
 - Correción Diagrama.md
 - Correción Requisitos.md
 
+---
+**Versión 1.6**
+
+- Correción Caso.md
+
+---
 # Índice de Contenido
 
 1. [Descripción del problema a resolver](Descripcion.md)

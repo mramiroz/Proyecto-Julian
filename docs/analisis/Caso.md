@@ -1,7 +1,7 @@
 @startuml
 left to right direction
-:Cliente no Autentificado: as CLNA
-:Cliente Autentificado: as CLA
+:Usuario: as CLNA
+:Cliente : as CLA
 :Administrador: as AD
 
 rectangle Supermercado {
