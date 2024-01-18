@@ -10,7 +10,7 @@
 ---
 ## Versión
 
-- Versión 1.1
+- Versión 1.3
 
 ---
 ### Control de cambios
@@ -35,6 +35,12 @@
   
   ---
 
+**Veriosn 1.3**
+
+- Realizo cambio Estudio.md
+
+---
+
 # Índice de Contenido
 
 1. [Descripción del problema a resolver](Descripcion.md)
@@ -42,5 +48,3 @@
 3. [Requisitos](Requisitos.md)
 4. [Casos de uso](Caso.md)
 5. [Diagrama de actividad de los casos de complejos](Diagrama.md)
-
---- 
