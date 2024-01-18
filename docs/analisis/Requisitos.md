@@ -4,27 +4,35 @@
 
 ### Funcionales: Funcionalidad Completa del Sistema
 
-1. **Registro de Usuario:**
-   - Dejar que la gente pueda crear cuentas fácilmente con su información básica.
-   - Asegurarnos de que la gente confirme su cuenta a través de un correo electrónico.
+1. **Buscar productos:**
+   - Permitir encontrar los productos similares
+   al nombre introducido.
+   - Asegurar que los resultados ofrecidos son relevantes.
 
-2. **Iniciar Sesión:**
-   - Crear un modo seguro para que la gente pueda entrar a su cuenta sin problemas.
+2. **Inspeccionar producto:**
+   - Mostrar información significativa del producto.
+   - Organizar los datos de manera coherente.
 
-3. **Buscar y Comprar:**
-   - Mostrar a la gente todo lo que pueden comprar en la página, organizado por categorías.
-   - Permitir a la gente buscar y encontrar lo que quieren fácilmente.
+3. **Comprar:**
+   - Proporcionar un proceso de pago de los productos sólido y entendible.
+   - Ofrecer la información de compra (ticket) correspondiente.
 
-4. **Carrito de Compras:**
-   - Permitir a la gente poner productos en su carrito de compras.
-   - Decirle a la gente si los productos que quieren están disponibles en ese momento.
-   - Dejar que la gente cambie la cantidad de productos en su carrito.
+4. **Crear producto:**
+   - El administrador debe poder establecer productos nuevos.
+   - En la creación deben detallarse los datos más importantes del producto, como la id(unica), el nombre, el precio, la fecha de caducidad (puede ser nunca) o la descripción.
 
-5. **Pagar por las Compras:**
-   - Ofrecer diferentes maneras seguras de pagar, como tarjetas de crédito o débito.
-   - Confirmar a la gente que su orden ha sido pagada correctamente.
+5. **Publicar productos:**
+   - El administrador puede publicar productos para hacerlos visibles y accesibles a todo el mundo que entre en el supermercado.
 
-<!--6. **Historial de Compras:**
+6. **Ocultar productos:**
+   - El administrador puede ocultar productos para hacerlos visibles y accesibles solo por el propio administrador.
+   - Los productos ocultos no pueden ser vistos ni accesibles por los clientes.
+
+7. **Cambiar información producto:**
+   - Los detalles del producto pueden ser modificados por el administrador.
+   - Deben tener contenido los datos más importantes, como la id (única), el nombre, el precio, la fecha de caducidad (puede ser nunca) o la descripción. 
+     
+<!--8. **Historial de Compras:**
    - Mostrar a la gente una lista de todo lo que han comprado antes.
    - Hacer que sea fácil repetir una compra que ya hicieron.
 -->

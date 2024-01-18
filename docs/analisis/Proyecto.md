@@ -27,19 +27,26 @@
 
 - Realizado Caso.md
 - Realizado Diagrama.md
----
+
+  ---
 
 **Versión 1.2**
 
 - Realizo cambio Descripcion.md
-  
+
   ---
 
-**Veriosn 1.3**
+**Versión 1.3**
 
 - Realizo cambio Estudio.md
 
----
+  ---
+
+**Versión 1.4**
+
+- Correciones en Caso.md y Requisitos.md
+  
+  ---
 
 # Índice de Contenido
 
