@@ -1,6 +1,7 @@
 @startuml
 left to right direction
-:Cliente: as CL
+:Cliente Autentificado: as CLA
+:Cliente no Autentificado: as CLNA
 :Administrador: as AD
 
 rectangle Supermercado {
@@ -13,9 +14,11 @@ rectangle Supermercado {
     usecase "Cambiar información producto" as UC7
 }
 
-CL -- UC1
-CL -- UC2
-CL -- UC3
+CLA -- UC1
+CLA -- UC2
+CLA -- UC3
+CLNA -- UC1
+CLNA -- UC2
 AD -- UC4
 AD -- UC5
 AD -- UC6
