@@ -23,3 +23,13 @@ Para el diagramado usamos Plantuml escrito en archivos markdown o Lucidspark seg
 En cuanto al prototipado hemos optado por hacerlo en alto nivel, por eso hemos elegido usar Figma, una aplicación web que nos permite diseñar las pantallas con relativa falicidad y en un espacio de trabajo compartido.
 
 ## 2 Definición del entorno / Automatización
+**Entornos**
+    Son herramientas que proporcionan un conjunto integrado de características y herramientas para facilitar el desarrollo de software.
+
+    Para realizar el codigo fuente de nuestra aplicación web, utilizaremos el lenguaje de php, acompañado del framework de Laravel para que nos brinde recursos para poder avanzar de forma productiva y automatizada en la creación del codigo fuente.
+
+**Automatizacion:**
+    
+    Alude uso de sistemas o procesos automáticos para realizar tareas sin intervención humana directa. El objetivo principal de la automatización es mejorar la eficiencia, la consistencia, la velocidad y la precisión en la ejecución de diversas tareas.
+
+    En nuestra aplicación web, este proceso lo haremos Laravel para que nos ayude en diferente campos de nuestro codigo fuente. 
