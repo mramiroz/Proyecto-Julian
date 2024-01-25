@@ -23,13 +23,16 @@ Para el diagramado usamos Plantuml escrito en archivos markdown o Lucidspark seg
 En cuanto al prototipado hemos optado por hacerlo en alto nivel, por eso hemos elegido usar Figma, una aplicación web que nos permite diseñar las pantallas con relativa falicidad y en un espacio de trabajo compartido.
 
 ## 2 Definición del entorno / Automatización
-**Entornos**
-    Son herramientas que proporcionan un conjunto integrado de características y herramientas para facilitar el desarrollo de software.
+## 2 Definición del entorno / Automatización
+### 2.1 **Entornos**
+Utilizaremos **git y git flow** para el control de versiones y estar interactuando con **Git Hub** donde estaremos actualizando los avances del proyecto.
+Como IDE principal utilizaremos **Visual Studio Code:**  que nos ayuda mucho con la organización de ficheros, en nuestra edición de codigo fuente, en depuraciones y añadir nuestras extenciones.
+ 
+Manejaremos nuestro proyecto a través del **Docker:** con el framework de **Laravel** y **Blade**.
 
-    Para realizar el codigo fuente de nuestra aplicación web, utilizaremos el lenguaje de php, acompañado del framework de Laravel para que nos brinde recursos para poder avanzar de forma productiva y automatizada en la creación del codigo fuente.
+Para gestionar nuestra Base de Datos utilizaremos **Postgress**.
+### **2.2 Automatización:**    
 
-**Automatizacion:**
-    
-    Alude uso de sistemas o procesos automáticos para realizar tareas sin intervención humana directa. El objetivo principal de la automatización es mejorar la eficiencia, la consistencia, la velocidad y la precisión en la ejecución de diversas tareas.
+Para gestionar nuestra automatización del proyecto, haremos un "git clone" de nuestro repositorio **Git Hub Proyecto**, esto en  nuestra máquina local, seguidamente haremos "docker compose up -d" para que se actualicé y la máquina estará preparada para seguir con el desarrollo.
 
-    En nuestra aplicación web, este proceso lo haremos Laravel para que nos ayude en diferente campos de nuestro codigo fuente. 
+     
