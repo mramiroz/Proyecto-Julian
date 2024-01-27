@@ -1,0 +1,22 @@
+#logo {
+    padding-left: 10dvh;
+
+}
+.marca {
+    font-family: 'Pacifico', cursive;
+    color: rgb(102, 170, 43);
+    font-size: larger;
+}
+#perfil {
+    text-decoration: none;
+    color: black;
+    order: 2;
+    }
+#carrito {
+text-decoration: none;
+order: 1;
+color: white;
+background-color: rgb(102, 170, 43);
+border-radius: 10%;
+}
+

@@ -15,7 +15,7 @@ class ProductoController extends Controller
     }
 
     public function show($producto){
-        return view('productos.show', compact('producto'));
+
     }
 }
 
