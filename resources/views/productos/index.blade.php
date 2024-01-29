@@ -4,3 +4,7 @@
 
 @extends('layouts.plantillaCuerpo')
 @section('content')
+
+@extends('layouts.plantillaFooter')
+@section('footer')
+
