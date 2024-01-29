@@ -30,9 +30,9 @@
         <article class="productos-expuestos-tarjeta">
             <section>
                 <figure class="figure-producto">
-                    <img src="..\img\tomate.jpg" alt="tomate" srcset="">
+                    <img src="{{ asset('imagenes/Jengibre.png') }}" alt="jengibre">
                 </figure>
-                <h2>Tomate</h2>
+                <h2>Jengibre</h2>
                 <h6 class="id">id:1</h6>
                 <p class="precio">2.69 €/kg</p>
                 <button type="submit" value="Submit" name="incluir" class="incluirCarrito">Añadir al
@@ -42,7 +42,7 @@
         <article class="productos-expuestos-tarjeta">
             <section>
                 <figure class="productos-expuestos-tarjeta-figure">
-                    <img src="..\img\tomate.jpg" alt="tomate" srcset="">
+                    <img src="{{ asset('imagenes/tomate.png') }}" alt="tomate">
                 </figure>
                 <h2 class="productos-expuestos-tarjeta-nombre">Tomate</h2>
                 <h6 class="productos-expuestos-tarjeta-id">id:1</h6>
