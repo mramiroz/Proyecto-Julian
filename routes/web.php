@@ -24,3 +24,9 @@ Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos/{producto}', 'show')->name('productos.show');
 });
 
+Route::controller(UsuarioController::class)->group(function () {
+    Route::get('/usuario', 'index')->name('usuario');
+    Route::get('/usuario/create', 'create')->name('usuario.create');
+    Route::get('/usuario/{usuario}', 'show')->name('usuario.show');
+});
+
