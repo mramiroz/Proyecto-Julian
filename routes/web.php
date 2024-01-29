@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
+use App\Htpp\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ use App\Http\Controllers\ProductoController;
 Route::get('/', HomeController::class)->name('home');
 
 Route::controller(ProductoController::class)->group(function () {
-    Route::get('/productos/index', 'index')->name('productos');
+    Route::get('/productos', 'index')->name('productos');
     Route::get('/productos/create', 'create')->name('productos.create');
     Route::get('/productos/{producto}', 'show')->name('productos.show');
 });
