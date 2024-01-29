@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Usuario;
 
 class UsuarioController extends Controller
 {
@@ -12,7 +13,7 @@ class UsuarioController extends Controller
     public function create(Request $request){
         $usuario = new Usuario();
 
-        $usario->nombre = $request->nombre;
+        $usuario->nombre = $request->nombre;
         $usuario->apellido = $request->apellido;
         $usuario->email = $request->email;
 

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/assets/cuerpo.css'])
-    
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <!-- La categorias de color verde de arriba de los productos-->
@@ -48,7 +50,8 @@
                     <h2 class="productos-expuestos-tarjeta-nombre">Tomate</h2>
                     <h6 class="productos-expuestos-tarjeta-id">id:1</h6>
                     <p class="productos-expuestos-tarjeta-precio">2.69 €/kg</p>
-                    <button type="submit" value="Submit" name="incluir" class="productos-expuestos-tarjeta-ic">Añadir al
+                    <button type="submit" value="Submit" name="incluir" class="productos-expuestos-tarjeta-ic">Añadir
+                        al
                         carrito</button>
                 </section>
             </article>
@@ -80,4 +83,5 @@
     </main>
     @yield('content')
 </body>
+
 </html>
