@@ -18,6 +18,8 @@ class ProductoController extends Controller
         $producto->descripcion = $request->descripcion;
         $producto->imagen = $request->imagen;
         $producto->importe = $request->importe;
+
+        $producto->save();
     }
 
     public function show($producto){
