@@ -1,1 +1,1 @@
-@extends('layouts.plantillaHeader')
+@extends('layouts.plantillaCuerpo')
