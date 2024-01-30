@@ -12,6 +12,7 @@
             </form>
             <a href="" id="perfil">Mi perfil</a>
             <a href="" id="carrito">Carrito(0)</a>
+            @vite(['resources/js/assets/header.js'])
         </section>
     </nav>
 </header>
