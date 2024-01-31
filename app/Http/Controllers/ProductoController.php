@@ -22,8 +22,8 @@ class ProductoController extends Controller
         $producto->save();
     }
 
-    public function show($producto){
-        return view('productos.show', ['producto' => $producto]);
+    public function show($seccion){
+        return view('productos.'.$seccion);
     }
 }
 
