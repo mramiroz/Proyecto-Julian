@@ -7,6 +7,7 @@
     @vite(['resources/css/assets/footer.css'])
     @vite(['resources/css/assets/header.css'])
     @vite(['resources/css/assets/cuerpo.css'])
+    @vite(['resources/js/assets/header.js'])
     @yield('styles')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('Tiernocado')</title>

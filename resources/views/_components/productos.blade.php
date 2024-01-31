@@ -1,4 +1,3 @@
-<body>
 
 
     @yield('categorias')
@@ -56,4 +55,4 @@
             </section>
         </article>
     </section>
-</body>
+
