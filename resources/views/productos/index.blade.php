@@ -9,6 +9,4 @@
 @section('productos-expuestos')
     @include('_components.productos', ['productos' => $productos])
 @endsection
-@section('footer')
-    @include('_components.footer')
-@endsection
+

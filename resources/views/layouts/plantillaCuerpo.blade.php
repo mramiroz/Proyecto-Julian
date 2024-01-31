@@ -7,6 +7,7 @@
     @vite(['resources/css/assets/footer.css'])
     @vite(['resources/css/assets/header.css'])
     @vite(['resources/css/assets/cuerpo.css'])
+    @vite(['resources/css/assets/pagoRealizado.css'])
     @vite(['resources/js/assets/header.js'])
     @yield('styles')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,10 +21,11 @@
         rel="stylesheet">
 </head>
 <body>
-@yield('header')
-
-@yield('categorias')
-@yield('productos-expuestos')
-@yield('footer')
+    @yield('header')
+    <main>
+        @yield('content')
+    </main>
+    <footer>
+        <p class="marca" id="footer">Tiernocado</p>
+    </footer>
 </body>
-</html>
