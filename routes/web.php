@@ -23,10 +23,6 @@ Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos');
     Route::get('/productos/create', 'create')->name('productos.create');
     Route::get('/productos/{seccion}', 'show')->name('productos.show');
-    Route::get('/productos/alimentacion', 'show')->name('productos.show.alimentacion');
-    Route::get('/productos/bebidas', 'show')->name('productos.show.bebidas');
-    Route::get('/productos/limpieza', 'show')->name('productos.show.limpieza');
-    Route::get('/productos/cuidado-personal', 'show')->name('productos.show.cuidado-personal');
 });
 
 Route::controller(UsuarioController::class)->group(function () {
