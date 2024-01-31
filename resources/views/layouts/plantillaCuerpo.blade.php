@@ -8,6 +8,7 @@
     @vite(['resources/css/assets/header.css'])
     @vite(['resources/css/assets/cuerpo.css'])
     @vite(['resources/css/assets/pagoRealizado.css'])
+    @vite(['resources/css/assets/perfil.css'])
     @vite(['resources/js/assets/header.js'])
     @yield('styles')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">

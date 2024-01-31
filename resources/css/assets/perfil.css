@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .address {
+    margin-top: 40px;
+  }
+
+  .address label {
+    display: inline-block;
+    width: 120px;
+  }
+
+  .address input[type="text"] {
+    width: calc(100% - 120px);
+  }

@@ -23,4 +23,7 @@ class UsuarioController extends Controller
     public function pagoRealizado(){
         return view('usuario.pagoRealizado');
     }
+    public function perfil(){
+        return view('usuario.perfil');
+    }
 }
