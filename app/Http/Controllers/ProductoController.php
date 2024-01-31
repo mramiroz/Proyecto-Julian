@@ -24,7 +24,7 @@ class ProductoController extends Controller
     }
 
     public function show($seccion){
-        return view('productos.'.$seccion);
+        return view('productos.show', ['seccion' => $seccion]);
     }
 }
 
