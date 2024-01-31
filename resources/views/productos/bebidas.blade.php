@@ -1,0 +1,14 @@
+@extends('layouts.plantillaBebidas')
+@section('title','Productos')
+@section('header')
+    @include('_components.header')
+@endsection
+@section('categorias')
+    @include('_components.categorias')
+@endsection
+@section('productos-bebidas')
+    @include('_components.productos')
+@endsection
+@section('footer')
+    @include('_components.footer')
+@endsection
