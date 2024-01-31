@@ -6,6 +6,9 @@
 @section('categorias')
     @include('_components.categorias')
 @endsection
+@section('productos-expuestos')
+    @include('_components.productos')
+@endsection
 @section('footer')
     @include('_components.footer')
 @endsection
