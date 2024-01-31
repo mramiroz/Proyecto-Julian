@@ -1,0 +1,13 @@
+#pagoRealizado {
+    font-size: 400px;
+    margin: 10%;
+    background-color: rgb(249, 249, 215);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    margin-left: 30%;
+    margin-top: 4%;
+}

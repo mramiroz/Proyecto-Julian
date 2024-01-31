@@ -1,4 +1,4 @@
-@extends('layouts.plantillaCuerpo')
+@extends('layouts.plantillaBebidas')
 @section('title','Productos')
 @section('header')
     @include('_components.header')
@@ -6,8 +6,8 @@
 @section('categorias')
     @include('_components.categorias')
 @endsection
-@section('productos-expuestos')
-    @include('_components.productos', ['productos' => $productos])
+@section('productos-bebidas')
+    @include('_components.productos')
 @endsection
 @section('footer')
     @include('_components.footer')
