@@ -7,7 +7,7 @@
     @include('_components.categorias')
 @endsection
 @section('productos-expuestos')
-    @include('_components.productos')
+    @include('_components.productos', ['productos' => $productos])
 @endsection
 @section('footer')
     @include('_components.footer')
