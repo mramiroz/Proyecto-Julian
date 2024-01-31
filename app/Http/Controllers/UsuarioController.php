@@ -20,4 +20,7 @@ class UsuarioController extends Controller
         $usuario->save();
         return redirect('/usuario');
     }
+    public function pagoRealizado(){
+        return view('usuario.pagoRealizado');
+    }
 }

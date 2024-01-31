@@ -2,11 +2,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Producto;
 
 class HomeController extends Controller
 {
     public function __invoke(){
-        //return "Página de inicio";
-        return view('home');
+        $productos = Producto::all();
+        return view('home', ['productos' => $productos]);
     }
 }

@@ -9,6 +9,3 @@
 @section('productos-bebidas')
     @include('_components.productos')
 @endsection
-@section('footer')
-    @include('_components.footer')
-@endsection
