@@ -28,7 +28,7 @@ Route::controller(ProductoController::class)->group(function () {
 
 Route::controller(UsuarioController::class)->group(function () {
     Route::get('/usuario', 'index')->name('usuario');
-    Route::get('/usuario/create', 'create')->name('usuario.create');
+    Route::post('/usuario/create', 'create')->name('usuario.create');
     Route::get('/usuario/pagoRealizado', 'pagoRealizado')->name('usuario.pagoRealizado');
     //Route::get('/usuario/{usuario}', 'show')->name('usuario.show');
     Route::get('/usuario/perfil', 'perfil')->name('usuario.perfil');
