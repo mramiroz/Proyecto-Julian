@@ -14,40 +14,46 @@ class ProductosSeeder extends Seeder
     public function run(): void
     {
         Producto::create([
-            'nombre' => 'Coca Cola',
-            'descripcion' => 'Bebida gaseosa',
-            'imagen' => 'img/cebolla.png',
-            'importe' => 1.5,
+            'nombre' => 'Leche',
+            'descripcion' => 'Leche entera',
+            'categoria' => 'alimentacion',
+            'imagen' => 'https://www.dia.es/compra-online/productos/lacteos-y-huevos/leche-entera/p/201234',
+            'importe' => 0.75
         ]);
         Producto::create([
-            'nombre' => 'Fanta',
-            'descripcion' => 'Bebida gaseosa',
-            'imagen' => 'img/cebolla.png',
-            'importe' => 1.5,
+            'nombre' => 'Pan',
+            'descripcion' => 'Pan de molde',
+            'categoria' => 'alimentacion',
+            'imagen' => 'https://www.dia.es/compra-online/productos/pan-y-bolleria/pan-de-molde/p/201236',
+            'importe' => 0.95
         ]);
         Producto::create([
-            'nombre' => 'Sprite',
-            'descripcion' => 'Bebida gaseosa',
-            'imagen' => 'img/cebolla.png',
-            'importe' => 1.5,
+            'nombre' => 'Coca-Cola',
+            'descripcion' => 'Coca-Cola',
+            'categoria' => 'bebidas',
+            'imagen' => 'https://www.dia.es/compra-online/productos/refrescos-y-zumos/refrescos-de-cola/refresco-de-cola/p/201237',
+            'importe' => 1.25
         ]);
         Producto::create([
-            'nombre' => 'Aquarius',
-            'descripcion' => 'Bebida gaseosa',
-            'imagen' => 'img/cebolla.png',
-            'importe' => 1.5,
+            'nombre' => 'Cerveza',
+            'descripcion' => 'Cerveza',
+            'categoria' => 'bebidas',
+            'imagen' => 'https://www.dia.es/compra-online/productos/bebidas-y-zumos/cervezas/cerveza/p/201238',
+            'importe' => 0.75
         ]);
         Producto::create([
-            'nombre' => 'Nestea',
-            'descripcion' => 'Bebida gaseosa',
-            'imagen' => 'img/cebolla.png',
-            'importe' => 3,
+            'nombre' => 'Gel',
+            'descripcion' => 'Gel de ducha',
+            'categoria' => 'cuidado personal',
+            'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/gel-de-ducha/p/201239',
+            'importe' => 1.25
         ]);
         Producto::create([
-            'nombre' => 'Monster',
-            'descripcion' => 'Bebida energética',
-            'imagen' => 'img/cebolla.png',
-            'importe' => 2.5,
+            'nombre' => 'Champú',
+            'descripcion' => 'Champú',
+            'categoria' => 'cuidado personal',
+            'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/champu/p/201240',
+            'importe' => 1.25
         ]);
     }
 }

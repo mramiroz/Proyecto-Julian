@@ -12,6 +12,7 @@ class Producto extends Model
     protected $fileable = [
         'nombre',
         'descripcion',
+        'categoria',
         'imagen',
         'importe'
     ];
