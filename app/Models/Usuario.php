@@ -9,10 +9,12 @@ class Usuario extends Model
 {
     use HasFactory;
 
+    protected $table = 'usuarios';
     protected $fileable = [
         'nombre',
         'apellidos',
         'email',
+        'password',
         'tipo'
     ];
 }
