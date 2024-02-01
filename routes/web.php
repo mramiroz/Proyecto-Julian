@@ -22,7 +22,8 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos');
-    Route::get('/productos/create', 'create')->name('productos.create');
+    Route::get('/productos/crear', 'crear')->name('productos.crear');
+    Route::post('/productos/create', 'create')->name('productos.create');
     Route::get('/productos/{seccion}', 'show')->name('productos.show');
 });
 
