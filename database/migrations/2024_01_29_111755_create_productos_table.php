@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion')->nulleable();
-            $table->enum('categoria', ["alimentacion", "bebidas", "cuidado personal", "limpieza"]);
+            $table->enum('categoria', ["alimentacion", "bebidas", "limpieza", "cuidado personal"])->default("alimentacion");
             $table->string('imagen');
             $table->double('importe');
             $table->timestamps();
