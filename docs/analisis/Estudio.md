@@ -1,5 +1,9 @@
 ## 2. Estudio del Mercado de Otras Soluciones
 
+## Porque Larvael y no WordPress
+
+- Laravel se elige sobre WordPress cuando se necesita mayor flexibilidad y control en el desarrollo web, especialmente para proyectos complejos y personalizados. Laravel es un framework robusto, ideal para aplicaciones más avanzadas y personalizadas, mientras que WordPress es un CMS diseñado principalmente para sitios web simples y blogs. La elección depende de la complejidad y requisitos específicos del proyecto.
+  
 ### Empresa 1: Mercadona Online
 
 - **Nombre:** Mercadona Online
