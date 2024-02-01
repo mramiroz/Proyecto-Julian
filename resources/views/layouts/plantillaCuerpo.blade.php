@@ -11,6 +11,7 @@
     @vite(['resources/css/assets/perfil.css'])
     @vite(['resources/css/assets/carrito.css'])
     @vite(['resources/js/assets/header.js'])
+    @vite(['resources/js/assets/carrito.js'])
     @yield('styles')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('Tiernocado')</title>
