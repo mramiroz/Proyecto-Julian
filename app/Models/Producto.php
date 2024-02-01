@@ -9,6 +9,7 @@ class Producto extends Model
 {
     use HasFactory;
 
+    protected $table = 'productos';
     protected $fileable = [
         'nombre',
         'descripcion',
