@@ -13,6 +13,12 @@
             </div>
 
             <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <input type="text" name="categoria" class="form-control" required>
+            </div>
+
+
+            <div class="form-group">
                 <label for="descripcion">Descripción:</label>
                 <input type="text" name="descripcion" class="form-control" required>
             </div>
