@@ -1,3 +1,3 @@
 <section>
-    <p class="marca" id="pagoRealizado">✅</p>
+    <p class="marca" id="pago-realizado">✅</p>
 </section>
