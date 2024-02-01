@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('cestas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_usuario');
+            $table->unsignedBigInteger('id_usuario');
             $table->double('total');
             $table->timestamps();
 
-            //$table->foreign('id_usuario')->references('id')->on('usuarios');
+            $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
         });
     }
 
