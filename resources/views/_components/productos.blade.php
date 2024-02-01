@@ -11,7 +11,7 @@
             <h2>{{$producto->nombre}}</h2>
             <h6 class="id">id:1</h6>
             <p class="precio">{{$producto->importe}}€/l</p>
-            <button type="submit" value="Submit" name="incluir" class="incluirCarrito">Añadir al
+            <button type="submit" value="Submit" name="incluir" class="incluir-carrito">Añadir al
                 carrito</button>
         </section>
     </article>
