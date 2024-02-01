@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CarritoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,7 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::get('/usuario/perfil', 'perfil')->name('usuario.perfil');
 });
 
+Route::controller(CarritoController::class)->group(function () {
+    Route::get('/carrito', 'index')->name('carrito');
+    Route::post('/carrito/add', 'addCarrito')->name('carrito.add');
+});
