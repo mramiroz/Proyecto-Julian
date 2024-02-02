@@ -14,6 +14,7 @@ class Usuario extends Model
         'nombre',
         'apellidos',
         'email',
+        'direccion',
         'password',
         'tipo'
     ];

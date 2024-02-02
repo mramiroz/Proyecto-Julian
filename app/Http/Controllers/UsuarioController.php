@@ -32,7 +32,7 @@ class UsuarioController extends Controller
         $cesta->id_usuario = $usuario->id;
         $cesta->total = 0;
         $cesta->save();
-        return redirect('/productos');
+        return redirect('/usuario/login');
     }
 
     public function validarUsuario(Request $request){
@@ -43,6 +43,9 @@ class UsuarioController extends Controller
         $usuario = Usuario::where('email', $request->email)->first();
         if($usuario){
             if(Hash::check($request->password, $usuario->password)){
+                if ($request->session()->has('usuario')){
+                    $request->session()->forget('usuario');
+                }
                 $request->session()->put('usuario', $usuario);
                 return redirect('/');
             }else{

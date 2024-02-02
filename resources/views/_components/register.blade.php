@@ -6,6 +6,9 @@
         <label for="apellidos">Apellido: </label>
         <input type="text" name="apellidos" id="apellidos">
         <br>
+        <label for="direccion">Dirección: </label>
+        <input type="text" name="direccion" id="direccion">
+        <br>
         <label for="email">Correo: </label>
         <input type="email" name="email" id="email">
         <br>

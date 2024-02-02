@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('email')->unique();
+            $table->string('direccion');
             $table->string('password');
             $table->enum('tipo', ['admin', 'user', 'visitor'])->default('visitor');
             $table->timestamps();
