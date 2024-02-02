@@ -34,6 +34,7 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::get('/usuario/login', 'login')->name('usuario.login');
     Route::get('/usuario/register', 'register')->name('usuario.register');
     Route::get('/usuario/perfil', 'perfil')->name('usuario.perfil');
+    Route::post('/usuario/validarUsuario', 'validarUsuario')->name('usuario.validarUsuario');
 });
 
 Route::controller(CarritoController::class)->group(function () {

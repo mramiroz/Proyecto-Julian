@@ -6,7 +6,7 @@
     width: 300px;
     margin-left: 35%;
 }
-#name, #password, #password-again{
+#name, #password, #password-again, #email{
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;

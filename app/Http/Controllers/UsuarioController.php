@@ -34,6 +34,7 @@ class UsuarioController extends Controller
         $cesta->save();
         return redirect('/productos');
     }
+
     public function validarUsuario(Request $request){
         $request->validate([
             'email' => 'required',
@@ -43,7 +44,7 @@ class UsuarioController extends Controller
         if($usuario){
             if(Hash::check($request->password, $usuario->password)){
                 $request->session()->put('usuario', $usuario);
-                return redirect('/productos');
+                return redirect('/');
             }else{
                 return redirect('/usuario/login');
             }
@@ -51,6 +52,7 @@ class UsuarioController extends Controller
             return redirect('/usuario/login');
         }
     }
+
     public function pagoRealizado(){
         return view('usuario.pagoRealizado');
     }
