@@ -16,7 +16,7 @@ return new class extends Migration
             //$table->unsignedBigInteger('id_cesta');
             $table->string('nombre');
             $table->string('apellidos');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password');
             $table->enum('tipo', ['admin', 'user', 'visitor'])->default('visitor');
             $table->timestamps();

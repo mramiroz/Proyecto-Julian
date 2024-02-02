@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use App\Models\Cesta;
 use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
@@ -26,6 +27,11 @@ class UsuarioController extends Controller
         $usuario->password = Hash::make($request->password);
 
         $usuario->save();
+
+        $cesta = new Cesta();
+        $cesta->id_usuario = $usuario->id;
+        $cesta->total = 0;
+        $cesta->save();
         return redirect('/productos');
     }
     public function validarUsuario(Request $request){

@@ -10,6 +10,7 @@ class Cesta extends Model
     use HasFactory;
 
     protected $fileable = [
+        'id_usuario',
         'total'
     ];
 }
