@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
-use App\Models\Cesta;
+use App\Models\Carrito;
 use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
@@ -28,10 +28,10 @@ class UsuarioController extends Controller
 
         $usuario->save();
 
-        $cesta = new Cesta();
-        $cesta->id_usuario = $usuario->id;
-        $cesta->total = 0;
-        $cesta->save();
+        $carrito = new Carrito();
+        $carrito->id_usuario = $usuario->id;
+        $carrito->total = 0;
+        $carrito->save();
         return redirect('/usuario/login');
     }
 
