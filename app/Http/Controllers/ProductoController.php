@@ -17,6 +17,7 @@ class ProductoController extends Controller
 
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
+        $producto->categoria = $request->categoria;
         $producto->imagen = $request->imagen;
         $producto->importe = $request->importe;
 
@@ -25,6 +26,10 @@ class ProductoController extends Controller
 
     public function show($seccion){
         return view('productos.'.$seccion);
+    }
+    public function crear(){
+        $categorias = ["alimentacion", "bebidas", "limpieza", "cuidado personal"];
+        return view('productos.crear' , ['categorias' => $categorias]);
     }
 }
 
