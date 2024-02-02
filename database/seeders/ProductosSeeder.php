@@ -42,16 +42,30 @@ class ProductosSeeder extends Seeder
             'importe' => 0.75
         ]);
         Producto::create([
+            'nombre' => 'Detergente',
+            'descripcion' => 'Detergente',
+            'categoria' => 'limpieza',
+            'imagen' => 'https://www.dia.es/limpieza-y-hogar/cuidado-de-la-ropa/p/273997',
+            'importe' => 1.15
+        ]);
+        Producto::create([
+            'nombre' => 'Lejía',
+            'descripcion' => 'Lejía',
+            'categoria' => 'limpieza',
+            'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/gel-de-ducha/p/201239',
+            'importe' => 1.30
+        ]);
+        Producto::create([
             'nombre' => 'Gel',
             'descripcion' => 'Gel de ducha',
-            'categoria' => 'cuidado personal',
+            'categoria' => 'cuidadoPersonal',
             'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/gel-de-ducha/p/201239',
             'importe' => 1.25
         ]);
         Producto::create([
             'nombre' => 'Champú',
             'descripcion' => 'Champú',
-            'categoria' => 'cuidado personal',
+            'categoria' => 'cuidadoPersonal',
             'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/champu/p/201240',
             'importe' => 1.25
         ]);
