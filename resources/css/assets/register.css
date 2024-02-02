@@ -1,0 +1,26 @@
+#register {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-left: 35%;
+}
+#name, #password, #password-again{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#submit {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #45a049;
+}

@@ -11,6 +11,7 @@
     @vite(['resources/css/assets/perfil.css'])
     @vite(['resources/css/assets/carrito.css'])
     @vite(['resources/css/assets/login.css'])
+    @vite(['resources/css/assets/register.css'])
     @vite(['resources/js/assets/header.js'])
     @vite(['resources/js/assets/carrito.js'])
     @yield('styles')
