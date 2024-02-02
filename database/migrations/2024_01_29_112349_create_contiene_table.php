@@ -13,13 +13,10 @@ return new class extends Migration
     {
         Schema::create('contiene', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_carritos');
-            $table->unsignedBigInteger('id_producto');
+            $table->foreignId('id_carrito')->constrained('carritos');
+            $table->foreignId('id_producto')->constrained('productos');
             $table->integer('cantidad');
             $table->timestamps();
-
-            $table->foreign('id_carritos')->references('id')->on('carritos');
-            $table->foreign('id_producto')->references('id')->on('productos');
         });
     }
 

@@ -16,6 +16,7 @@ class UsuarioController extends Controller
         $request->validate([
             'nombre' => 'required',
             'apellidos' => 'required',
+            'direccion' => 'required',
             'email' => 'required',
             'password' => 'required',
         ]);
@@ -23,6 +24,7 @@ class UsuarioController extends Controller
 
         $usuario->nombre = $request->nombre;
         $usuario->apellidos = $request->apellidos;
+        $usuario->direccion = $request->direccion;
         $usuario->email = $request->email;
         $usuario->password = Hash::make($request->password);
 
