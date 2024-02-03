@@ -20,21 +20,17 @@ class UsuarioController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        $usuario = new Usuario();
 
-        $usuario->nombre = $request->nombre;
-        $usuario->apellidos = $request->apellidos;
-        $usuario->direccion = $request->direccion;
-        $usuario->email = $request->email;
-        $usuario->password = Hash::make($request->password);
+        $usuario = Usuario::create([
+            'nombre' => $request->nombre,
+            'apellidos' => $request->apellidos,
+            'direccion' => $request->direccion,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+        $usuario->carrito()->create([]);
 
-        $usuario->save();
-
-        $carrito = new Carrito();
-        $carrito->id_usuario = $usuario->id;
-        $carrito->total = 0;
-        $carrito->save();
-        return redirect('/usuario/login');
+        return redirect('/login');
     }
 
     public function validarUsuario(Request $request){
@@ -51,10 +47,10 @@ class UsuarioController extends Controller
                 $request->session()->put('usuario', $usuario);
                 return redirect('/');
             }else{
-                return redirect('/usuario/login');
+                return redirect('/login');
             }
         }else{
-            return redirect('/usuario/login');
+            return redirect('/login');
         }
     }
 

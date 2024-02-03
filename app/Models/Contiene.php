@@ -9,7 +9,7 @@ class Contiene extends Model
 {
     use HasFactory;
     protected $table = 'contiene';
-    protected $fileable = [
+    protected $fillable = [
         'id_carrito',
         'id_producto',
         'cantidad'

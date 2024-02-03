@@ -31,8 +31,8 @@ Route::controller(UsuarioController::class)->group(function () {
     Route::get('/usuario', 'index')->name('usuario');
     Route::post('/usuario/create', 'create')->name('usuario.create');
     Route::get('/usuario/pagoRealizado', 'pagoRealizado')->name('usuario.pagoRealizado');
-    Route::get('/usuario/login', 'login')->name('usuario.login');
-    Route::get('/usuario/register', 'register')->name('usuario.register');
+    Route::get('/login', 'login')->name('usuario.login');
+    Route::get('/register', 'register')->name('usuario.register');
     Route::get('/usuario/perfil', 'perfil')->name('usuario.perfil');
     Route::post('/usuario/validarUsuario', 'validarUsuario')->name('usuario.validarUsuario');
 });

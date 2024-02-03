@@ -9,7 +9,7 @@ class Carrito extends Model
 {
     use HasFactory;
 
-    protected $fileable = [
+    protected $fillable = [
         'id_usuario',
         'total'
     ];

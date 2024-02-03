@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('carritos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_usuario');
-            $table->double('total');
+            $table->double('total')->default(0);
             $table->timestamps();
 
             $table->foreign('id_usuario')->references('id')->on('usuarios')->onDelete('cascade');
