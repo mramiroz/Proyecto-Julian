@@ -21,5 +21,6 @@
             </div>
         </section>
         @endforeach
+        @include('productos.cards')
     </article>
 </section>

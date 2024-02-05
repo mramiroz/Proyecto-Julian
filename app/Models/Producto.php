@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Producto extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     protected $table = 'productos';
     protected $fillable = [
@@ -17,4 +18,9 @@ class Producto extends Model
         'imagen',
         'importe'
     ];
+    public function toSearchableArray()
+    {
+        $array = $this->only('nombre', 'descripcion', 'categoria');
+        return $array;
+    }
 }
