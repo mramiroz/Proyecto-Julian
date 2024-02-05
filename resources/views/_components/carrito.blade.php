@@ -25,27 +25,13 @@
         @endforeach
     </section>
     <article>
-        <h2 id="resumen-titulo">Resumen de compra</h2>
-        <section id="subtotal">
-            <p id=""> Gastos de envio:</p>
-            <p> 6.47</p>
-        </section>
-    </article>
+    <section>
+        <h2 id="envio-titulo">Envío</h2>
+        <p id="envio-precio">Gratis</p>
+    </section>
+    <section>
+        <h2 id="total-titulo">Total</h2>
+        <p id="total-precio">{{$total}}€</p>
+    </section>
+    <button class="checkout">Ir al pago →</button>
 </article>
-<div>
-
-</div>
-<div class="summary">
-    <div class="shipping">Gastos de envio</div>
-    <div class="total">3.99€</div>
-</div>
-<div class="summary">
-    <div class="tax">IVA</div>
-    <div class="total">2.20€</div>
-</div>
-<div class="summary">
-    <div class="total">Total</div>
-    <div class="total">12.66€</div>
-</div>
-<button class="checkout">Ir al pago →</button>
-</div>

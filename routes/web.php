@@ -42,4 +42,5 @@ Route::controller(CarritoController::class)->group(function () {
     Route::post('/count', 'getCount')->name('carrito.count');
     Route::post('/carrito/delete', 'delete')->name('carrito.delete');
     Route::post('/carrito/add', 'addCarrito')->name('carrito.add');
+    Route::post('/carrito/update', 'updateTotal')->name('carrito.update');
 });

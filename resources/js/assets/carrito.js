@@ -35,5 +35,22 @@ $(document).ready(function() {
                 }
             });
         });
-    })
+    });
+
+    $('input[name="cantidad"]').on('change', function(){
+        var product_id = $(this).siblings('input[name="product_id"]').val();
+        var cantidad = $(this).val();
+        $.ajax({
+            url: '/carrito/update',
+            type: 'POST',
+            data: {
+                "_token": $('meta[name="csrf-token"]').attr('content'),
+                "product_id": product_id,
+                "cantidad": cantidad
+            },
+            success: function(response){
+                $('#total-precio').text(response.newTotal + '€');
+            }
+        });
+    });
 });

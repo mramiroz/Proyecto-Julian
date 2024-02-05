@@ -57,14 +57,20 @@ class CarritoController extends Controller
         $userId = session('usuario.id');
         $carrito = Carrito::where('id_usuario', $userId)->first();
         $contiene = Contiene::where('id_carrito', $carrito->id)->get();
+
+        $total = 0;
         $productos = [];
         foreach ($contiene as $c) {
             $producto = Producto::find($c->id_producto);
             $producto->cantidad = $c->cantidad;
+            $importe = (float) $producto->importe;
+            $cantidad = (int) $c->cantidad;
+            $total += $importe * $cantidad;
             array_push($productos, $producto);
         }
-        return view('carrito.index', ['productos' => $productos]);
+        return view('carrito.index', ['productos' => $productos, 'total' => $total]);
     }
+
 
     public function getCount()
     {
@@ -72,5 +78,10 @@ class CarritoController extends Controller
         $count = DB::table('contiene')->where('id_carrito', $usuarioId)->count();
         return response()->json(['count' => $count]);
     }
+    public function updateTotal(Request $request){
+        $producto = Producto::find($request->product_id);
+        $newTotal = $producto->importe * $request->cantidad;
+
+        return response()->json(['newTotal' => $newTotal]);
+    }
 }
-?>
