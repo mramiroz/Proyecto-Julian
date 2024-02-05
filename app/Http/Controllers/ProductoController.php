@@ -8,24 +8,22 @@ use App\Models\Producto;
 class ProductoController extends Controller
 {
     public function index(){
-        $productos = Producto::all();
+        $productos = Producto::where('categoria', 'alimentacion');
         return view('productos.index', ['productos' => $productos]);
     }
 
     public function create(Request $request){
-        $producto = new Producto();
-
-        $producto->nombre = $request->nombre;
-        $producto->descripcion = $request->descripcion;
-        $producto->categoria = $request->categoria;
-        $producto->imagen = $request->imagen;
-        $producto->importe = $request->importe;
-
-        $producto->save();
+        Producto::create([
+            'nombre' => $request->nombre,
+            'descripcion' => $request->descripcion,
+            'categoria' => $request->categoria,
+            'imagen' => $request->imagen,
+            'importe' => $request->importe
+        ]);
     }
-
     public function show($seccion){
-        return view('productos.'.$seccion);
+        $productos = Producto::all()->where('categoria', $seccion);
+        return view('productos.index', ['productos' => $productos]);
     }
     public function crear(){
         $categorias = ["alimentacion", "bebidas", "limpieza", "cuidado personal"];

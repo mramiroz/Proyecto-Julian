@@ -9,7 +9,7 @@
             @endphp
             @foreach($productos as $producto)
             @if (!in_array($producto->categoria, $categoriasIntroducidas))
-            <li id="categoria"><a href="{{route('productos.show', $producto->categoria)}}"
+            <li id="categoria"><a href="{{route('categoria.show', $producto->categoria)}}"
                     id="perfil">{{$producto->categoria}}</a></li>
             @php
             array_push($categoriasIntroducidas, $producto->categoria);

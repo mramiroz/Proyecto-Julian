@@ -9,4 +9,3 @@
 @section('productos-expuestos')
     @include('_components.productos', ['productos' => $productos])
 @endsection
-

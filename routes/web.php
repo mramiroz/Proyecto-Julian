@@ -24,7 +24,7 @@ Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos', 'index')->name('productos');
     Route::get('/productos/crear', 'crear')->name('productos.crear');
     Route::post('/productos/create', 'create')->name('productos.create');
-    Route::get('/productos/{seccion}', 'show')->name('productos.show');
+    Route::get('/categoria/{seccion}', 'show')->name('categoria.show');
 });
 
 Route::controller(UsuarioController::class)->group(function () {
