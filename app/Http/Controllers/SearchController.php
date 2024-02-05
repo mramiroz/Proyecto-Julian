@@ -15,6 +15,6 @@ class SearchController extends Controller
             ->orWhere('descripcion', 'LIKE', "%$query%")
             ->orWhere('categoria', 'LIKE', "%$query%")
             ->paginate(10);
-        return view('productos.index', ['productos' => $productos, 'categorias' => $categorias]);
+        return view('productos.cards', ['productos' => $productos, 'categorias' => $categorias])->render();
     }
 };

@@ -24,3 +24,16 @@ $(document).ready(function (){
     }
     updateCount();
 });
+
+$('#buscador').on('keyup', function(){
+    var query = $(this).val();
+    $.ajax({
+        url: '/search',
+        data: {
+            query: query
+        },
+        success: function (data){
+            $('.productos-expuestos-tarjeta').html(data);
+        }
+    });
+});

@@ -26,6 +26,7 @@ Route::controller(ProductoController::class)->group(function () {
     Route::get('/productos/crear', 'crear')->name('productos.crear');
     Route::post('/productos/create', 'create')->name('productos.create');
     Route::get('/categoria/{seccion}', 'show')->name('categoria.show');
+    Route::get('/producto/{id}', 'producto')->name('producto.cards');
 });
 
 Route::controller(UsuarioController::class)->group(function () {
