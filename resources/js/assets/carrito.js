@@ -12,6 +12,9 @@ $(document).ready(function() {
                     product_id: productId,
                     _token: $('meta[name="csrf-token"]').attr('content')
                 },
+                success:function(result){
+                    location.reload();
+                }
             });
         });
     });
