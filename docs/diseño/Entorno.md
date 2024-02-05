@@ -31,6 +31,13 @@ Como IDE principal utilizaremos **Visual Studio Code:**  que nos ayuda mucho con
 Manejaremos nuestro proyecto a través del **Docker:** con el framework de **Laravel** y **Blade**.
 
 Para gestionar nuestra Base de Datos utilizaremos **Postgress**.
+
+Para gestionar nuestra Vista y poner en funcionamiento de **Vite** utilizamos **Node.js** para ejecuat esto tenemos que ejecutar los siguientes comandos:
+
+1. npm init vite
+2. npm install
+3. npm run dev(Este comando hay que ejecutarlo cada vez que queremos ver las vistas)
+
 ### **2.2 Automatización:**    
 
 Para gestionar nuestra automatización del proyecto, haremos un "git clone" de nuestro repositorio **Git Hub Proyecto**, esto en  nuestra máquina local, seguidamente haremos "docker compose up -d" para que se actualicé y la máquina estará preparada para seguir con el desarrollo.
