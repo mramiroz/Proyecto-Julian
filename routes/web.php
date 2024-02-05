@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +44,8 @@ Route::controller(CarritoController::class)->group(function () {
     Route::post('/carrito/delete', 'delete')->name('carrito.delete');
     Route::post('/carrito/add', 'addCarrito')->name('carrito.add');
     Route::post('/carrito/update', 'updateTotal')->name('carrito.update');
+});
+
+Route::controller(SearchController::class)->group(function () {
+    Route::get('/search', 'index')->name('search.index');
 });
