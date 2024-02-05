@@ -20,6 +20,12 @@ class CarritoController extends Controller
             ]);
         }
     }
+    public function delete(Request $request){
+        $userId = session('usuario.id');
+        $carrito = Carrito::where('id_usuario', $userId)->first();
+        $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $request->product_id)->first();
+        $contiene->delete();
+    }
 
     public function addCarrito(Request $request)
     {

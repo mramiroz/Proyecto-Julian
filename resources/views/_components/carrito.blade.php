@@ -15,6 +15,11 @@
                         <input type="number" name="cantidad" id="cantidad">
                         <p id="unidad">kg</p>
                     </form>
+                    <form action="/carrito/delete" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{$producto->id}}">
+                        <button class="eliminar-carrito">Eliminar</button>
+                    </form>
                 </section>
             </article>
         @endforeach
