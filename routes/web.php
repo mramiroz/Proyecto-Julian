@@ -39,5 +39,6 @@ Route::controller(UsuarioController::class)->group(function () {
 
 Route::controller(CarritoController::class)->group(function () {
     Route::get('/carrito', 'index')->name('carrito');
+    Route::post('/count', 'getCount')->name('carrito.count');
     Route::post('/carrito/add', 'addCarrito')->name('carrito.add');
 });

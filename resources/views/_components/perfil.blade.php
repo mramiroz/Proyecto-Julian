@@ -1,4 +1,4 @@
-<body>
+<body id="body-perfil">
     <h1>Perfil de usuario</h1>
 
   <label for="name">Nombre : <span id="username">nombre_usuario</span></label>

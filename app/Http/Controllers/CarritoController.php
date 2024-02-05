@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Producto;
 use App\Models\Carrito;
 use App\Models\Contiene;
@@ -57,6 +58,13 @@ class CarritoController extends Controller
             array_push($productos, $producto);
         }
         return view('carrito.index', ['productos' => $productos]);
+    }
+
+    public function getCount()
+    {
+        $usuarioId = session('usuario.id');
+        $count = DB::table('contiene')->where('id_carrito', $usuarioId)->count();
+        return response()->json(['count' => $count]);
     }
 }
 ?>
