@@ -8,7 +8,7 @@ use App\Models\Producto;
 class ProductoController extends Controller
 {
     public function index(){
-        $productos = Producto::where('categoria', 'alimentacion');
+        $productos = Producto::all();
         return view('productos.index', ['productos' => $productos]);
     }
 
@@ -22,8 +22,9 @@ class ProductoController extends Controller
         ]);
     }
     public function show($seccion){
+        $categorias = Producto::all();
         $productos = Producto::all()->where('categoria', $seccion);
-        return view('productos.index', ['productos' => $productos]);
+        return view('home', ['productos' => $productos, 'categorias' => $categorias]);
     }
     public function crear(){
         $categorias = ["alimentacion", "bebidas", "limpieza", "cuidado personal"];
