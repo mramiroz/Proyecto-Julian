@@ -5,6 +5,6 @@
 @endsection
 @section('content')
     @include('_components.categorias')
-    <h2>{{ session('usuario.nombre')}}</h2>
+    <h2>Bienvenido {{ session('usuario.nombre')}} !!</h2>
     @include('_components.productos', ['productos' => $productos])
 @endsection

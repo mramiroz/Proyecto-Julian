@@ -22,22 +22,29 @@ class CarritoController extends Controller
 
     public function addCarrito(Request $request)
     {
-        $userId = session('usuario.id');
-        $carrito = Carrito::where('id_usuario', $userId)->first();
-        $product = Producto::find($request->product_id);
-        $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $product->id)->first();
-        if ($contiene){
-            $contiene->cantidad += 1;
-            $contiene->save();
+        if  (session('usuario'))
+        {
+            $userId = session('usuario.id');
+            $carrito = Carrito::where('id_usuario', $userId)->first();
+            $product = Producto::find($request->product_id);
+            $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $product->id)->first();
+            if ($contiene){
+                $contiene->cantidad += 1;
+                $contiene->save();
+            }
+            else {
+                Contiene::create([
+                    'id_carrito' => $carrito->id,
+                    'id_producto' => $product->id,
+                    'cantidad' => 1
+                ]);
+                return response()->json(['success' => true]);
+            }
         }
-        else {
-            Contiene::create([
-                'id_carrito' => $carrito->id,
-                'id_producto' => $product->id,
-                'cantidad' => 1
-            ]);
+        else
+        {
+            return redirect('/login');
         }
-        return redirect('/');
     }
 
     public function index(){
