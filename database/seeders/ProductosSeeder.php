@@ -17,56 +17,56 @@ class ProductosSeeder extends Seeder
             'nombre' => 'Leche',
             'descripcion' => 'Leche entera',
             'categoria' => 'alimentacion',
-            'imagen' => 'https://www.dia.es/compra-online/productos/lacteos-y-huevos/leche-entera/p/201234',
+            'imagen' => 'https://www.despensa.es/documents/10180/10736/010001_M.jpg',
             'importe' => 0.75
         ]);
         Producto::create([
             'nombre' => 'Pan',
             'descripcion' => 'Pan de molde',
             'categoria' => 'alimentacion',
-            'imagen' => 'https://www.dia.es/compra-online/productos/pan-y-bolleria/pan-de-molde/p/201236',
+            'imagen' => 'https://m.media-amazon.com/images/I/716lpUzkOiL.jpg',
             'importe' => 0.95
         ]);
         Producto::create([
             'nombre' => 'Coca-Cola',
             'descripcion' => 'Coca-Cola',
             'categoria' => 'bebidas',
-            'imagen' => 'https://www.dia.es/compra-online/productos/refrescos-y-zumos/refrescos-de-cola/refresco-de-cola/p/201237',
+            'imagen' => 'https://www.mosbo.es/cdn/shop/products/coca-cola-lata-33-cl-pack-24-und.jpg?v=1679402039&width=1445',
             'importe' => 1.25
         ]);
         Producto::create([
             'nombre' => 'Cerveza',
             'descripcion' => 'Cerveza',
             'categoria' => 'bebidas',
-            'imagen' => 'https://www.dia.es/compra-online/productos/bebidas-y-zumos/cervezas/cerveza/p/201238',
+            'imagen' => 'https://m.media-amazon.com/images/I/41qRmrBrK4L.jpg',
             'importe' => 0.75
         ]);
         Producto::create([
             'nombre' => 'Detergente',
             'descripcion' => 'Detergente',
             'categoria' => 'limpieza',
-            'imagen' => 'https://www.dia.es/limpieza-y-hogar/cuidado-de-la-ropa/p/273997',
+            'imagen' => 'https://static.carrefour.es/hd_350x_/img_pim_food/769169_00_1.jpg',
             'importe' => 1.15
         ]);
         Producto::create([
             'nombre' => 'Lejía',
             'descripcion' => 'Lejía',
             'categoria' => 'limpieza',
-            'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/gel-de-ducha/p/201239',
+            'imagen' => 'https://media.gettyimages.com/id/458577301/es/foto/clorox-lej%C3%ADa.jpg?s=612x612&w=0&k=20&c=43bp9DFFvh-Z7I8nZEYzbqk6uUvWOCeyS4UnhfobaEc=',
             'importe' => 1.30
         ]);
         Producto::create([
             'nombre' => 'Gel',
             'descripcion' => 'Gel de ducha',
             'categoria' => 'cuidadoPersonal',
-            'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/gel-de-ducha/p/201239',
+            'imagen' => 'https://www.perfumeriaslaguna.com/images/products-listing/gel-moussel-clasico-viaje-bolso-bano-y-ducha.jpg',
             'importe' => 1.25
         ]);
         Producto::create([
             'nombre' => 'Champú',
             'descripcion' => 'Champú',
             'categoria' => 'cuidadoPersonal',
-            'imagen' => 'https://www.dia.es/compra-online/productos/higiene-y-cuidado-personal/champu/p/201240',
+            'imagen' => 'https://www.grutinetpro.com/articulos/lg/lg_309554_0.jpg',
             'importe' => 1.25
         ]);
     }

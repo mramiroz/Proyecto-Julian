@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_carrito')->constrained('carritos');
             $table->foreignId('id_producto')->constrained('productos');
-            $table->integer('cantidad');
+            $table->integer('cantidad')->default(1);
             $table->timestamps();
         });
     }
