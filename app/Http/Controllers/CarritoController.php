@@ -38,7 +38,6 @@ class CarritoController extends Controller
                     'id_producto' => $product->id,
                     'cantidad' => 1
                 ]);
-                return response()->json(['success' => true]);
             }
         }
         else

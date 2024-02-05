@@ -4,5 +4,5 @@
     @include('_components.header')
 @endsection
 @section('content')
-    @include('_components.carrito')
+    @include('_components.carrito', ['productos' => $productos])
 @endsection
