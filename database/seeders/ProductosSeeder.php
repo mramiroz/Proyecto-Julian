@@ -17,7 +17,7 @@ class ProductosSeeder extends Seeder
             'nombre' => 'Leche',
             'descripcion' => 'Leche entera',
             'categoria' => 'alimentacion',
-            'imagen' => 'https://www.despensa.es/documents/10180/10736/010001_M.jpg',
+            'imagen' => 'images/Leche.jpg',
             'importe' => 0.75
         ]);
         Producto::create([

@@ -6,7 +6,8 @@
         @foreach($productos as $producto)
         <section class="producto">
             <figure class="figure-producto">
-                <img src="{{$producto->imagen}}" alt="{{$producto->nombre}}">
+                <img src="{{ asset('storage/' . $producto->imagen) }}" alt="{{ $producto->nombre }}">
+
             </figure>
             <div class="info-producto">
                 <h2>{{$producto->nombre}}</h2>
