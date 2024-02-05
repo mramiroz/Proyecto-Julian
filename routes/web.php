@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\ImagenesController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Storage;
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +48,9 @@ Route::controller(CarritoController::class)->group(function () {
     Route::post('/carrito/add', 'addCarrito')->name('carrito.add');
     Route::post('/carrito/update', 'updateTotal')->name('carrito.update');
 });
-
+Route::controller(SearchController::class)->group(function () {
+    Route::get('/search', 'index')->name('search');
+});
 Route::controller(ImagenesController::class)->group(function () {
     Route::get('/images/{filename}', 'ImagenesController@show');
 });
