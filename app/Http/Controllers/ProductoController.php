@@ -13,19 +13,18 @@ class ProductoController extends Controller
     }
 
     public function create(Request $request){
-        $producto = new Producto();
-
-        $producto->nombre = $request->nombre;
-        $producto->descripcion = $request->descripcion;
-        $producto->categoria = $request->categoria;
-        $producto->imagen = $request->imagen;
-        $producto->importe = $request->importe;
-
-        $producto->save();
+        Producto::create([
+            'nombre' => $request->nombre,
+            'descripcion' => $request->descripcion,
+            'categoria' => $request->categoria,
+            'imagen' => $request->imagen,
+            'importe' => $request->importe
+        ]);
     }
-
     public function show($seccion){
-        return view('productos.'.$seccion);
+        $categorias = Producto::all();
+        $productos = Producto::all()->where('categoria', $seccion);
+        return view('home', ['productos' => $productos, 'categorias' => $categorias]);
     }
     public function crear(){
         $categorias = ["alimentacion", "bebidas", "limpieza", "cuidado personal"];

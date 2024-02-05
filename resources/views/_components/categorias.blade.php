@@ -7,12 +7,12 @@
             @php
             $categoriasIntroducidas = [];
             @endphp
-            @foreach($productos as $producto)
-            @if (!in_array($producto->categoria, $categoriasIntroducidas))
-            <li id="categoria"><a href="{{route('productos.show', $producto->categoria)}}"
-                    id="perfil">{{$producto->categoria}}</a></li>
+            @foreach($categorias as $categoria)
+            @if (!in_array($categoria->categoria, $categoriasIntroducidas))
+            <li id="categoria"><a href="{{route('categoria.show', $categoria->categoria)}}"
+                    id="perfil">{{$categoria->categoria}}</a></li>
             @php
-            array_push($categoriasIntroducidas, $producto->categoria);
+            array_push($categoriasIntroducidas, $categoria->categoria);
             @endphp
             @endif
             @endforeach

@@ -1,7 +1,7 @@
 <header>
     <nav id="nav-cabecera">
         <section id="logo">
-            <a href="" class="marca" id="marca-superior">Tiernocado</a>
+            <a href="/" class="marca" id="marca-superior">Tiernocado</a>
         </section>
         <section id="utilidades">
             <a href="/carrito" id="carrito"></a>

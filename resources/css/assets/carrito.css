@@ -79,3 +79,7 @@
     cursor: pointer;
     margin-top: 10px;
   }
+  .eliminar-carrito:hover{
+    background-color: white;
+    color: black;
+  }
