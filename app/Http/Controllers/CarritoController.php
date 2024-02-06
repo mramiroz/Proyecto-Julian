@@ -29,8 +29,11 @@ class CarritoController extends Controller
 
     public function addCarrito(Request $request)
     {
-        if  (session('usuario'))
+        if  (!session('usuario'))
         {
+            return redirect('/login');
+        }
+        else{
             $userId = session('usuario.id');
             $carrito = Carrito::where('id_usuario', $userId)->first();
             $product = Producto::find($request->product_id);
@@ -47,28 +50,30 @@ class CarritoController extends Controller
                 ]);
             }
         }
-        else
-        {
-            return redirect('/login');
-        }
+
     }
 
     public function index(){
-        $userId = session('usuario.id');
-        $carrito = Carrito::where('id_usuario', $userId)->first();
-        $contiene = Contiene::where('id_carrito', $carrito->id)->get();
-
-        $total = 0;
-        $productos = [];
-        foreach ($contiene as $c) {
-            $producto = Producto::find($c->id_producto);
-            $producto->cantidad = $c->cantidad;
-            $importe = (float) $producto->importe;
-            $cantidad = (int) $c->cantidad;
-            $total += $importe * $cantidad;
-            array_push($productos, $producto);
+        if (!session ('usuario')){
+            return redirect('/login');
         }
-        return view('carrito.index', ['productos' => $productos, 'total' => $total]);
+        else{
+            $userId = session('usuario.id');
+            $carrito = Carrito::where('id_usuario', $userId)->first();
+            $contiene = Contiene::where('id_carrito', $carrito->id)->get();
+
+            $total = 0;
+            $productos = [];
+            foreach ($contiene as $c) {
+                $producto = Producto::find($c->id_producto);
+                $producto->cantidad = $c->cantidad;
+                $importe = (float) $producto->importe;
+                $cantidad = (int) $c->cantidad;
+                $total += $importe * $cantidad;
+                array_push($productos, $producto);
+            }
+            return view('carrito.index', ['productos' => $productos, 'total' => $total]);
+        }
     }
 
 

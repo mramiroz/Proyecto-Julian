@@ -17,7 +17,6 @@ $(document).ready(function (){
             url: '/count',
             method: 'POST',
             success: function (data){
-                console.log(data);
                 $('#carrito').text("Carrito ("+ data.count + ")");
             }
     });

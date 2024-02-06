@@ -83,7 +83,50 @@
     background-color: white;
     color: black;
   }
-  .figure-producto img {
-    width: 150px;
-    height: 250px;
+  .figure-producto-cart {
+    margin: 0;
+    align-items: center;
   }
+  .figure-producto-cart img {
+    width: 150px;
+    height: 170px;
+  }
+
+  .producto-info {
+    display: flex;
+    align-items: start;
+}
+
+.producto-info .figure-producto-cart {
+    margin-right: 20px;
+}
+
+.productos-carrito-tarjeta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #F9F9D7;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    color: black;
+}
+
+.input-cantidad {
+    width: 30px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.cantidad-input{
+    display: flex;
+    align-items: center;
+}
+.cantidad-input label{
+    margin: 0;
+    margin-right: 10px;
+}

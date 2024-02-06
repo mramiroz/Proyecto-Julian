@@ -37,7 +37,7 @@ $(document).ready(function() {
         });
     });
 
-    $('input[name="cantidad"]').on('change', function(){
+    $('.cantidad').on('input', function(){
         var product_id = $(this).siblings('input[name="product_id"]').val();
         var cantidad = $(this).val();
         $.ajax({
