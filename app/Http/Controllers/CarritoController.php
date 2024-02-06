@@ -83,10 +83,10 @@ class CarritoController extends Controller
         $count = DB::table('contiene')->where('id_carrito', $usuarioId)->count();
         return response()->json(['count' => $count]);
     }
-    public function updateTotal(Request $request){
-        $producto = Producto::find($request->product_id);
-        $newTotal = $producto->importe * $request->cantidad;
 
+    public function updateTotal(Request $request){
+        $producto = Producto::find($request->id_producto);
+        $newTotal = $producto->importe * $request->cantidad;
         return response()->json(['newTotal' => $newTotal]);
     }
 }
