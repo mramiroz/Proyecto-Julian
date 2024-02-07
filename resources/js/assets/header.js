@@ -24,15 +24,21 @@ $(document).ready(function (){
     updateCount();
 });
 
-$('#buscador').on('keyup', function(){
+$('#buscador').on('input', function(){
     var query = $(this).val();
-    $.ajax({
-        url: '/search',
-        data: {
-            query: query
-        },
-        success: function (data){
-            $('.productos-expuestos-tarjeta').html(data);
+    $.get('/autocomplete?query=' + query, function(data){
+        var suggestions = '';
+        for (var i = 0; i < data.length; i++){
+            suggestions += '<p>' + data[i].nombre + '</p>';
         }
+        $('#suggestions').html(suggestions);
     });
+})
+
+document.getElementById('buscador').addEventListener('blur', function() {
+    document.getElementById('suggestions').style.display = 'none';
+});
+
+document.getElementById('buscador').addEventListener('focus', function() {
+    document.getElementById('suggestions').style.display = 'block';
 });

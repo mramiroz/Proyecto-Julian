@@ -50,6 +50,7 @@ Route::controller(CarritoController::class)->group(function () {
 });
 Route::controller(SearchController::class)->group(function () {
     Route::get('/search', 'index')->name('search');
+    Route::get('/autocomplete', 'autocomplete')->name('autocomplete');
 });
 Route::controller(ImagenesController::class)->group(function () {
     Route::get('/images/{filename}', 'show');

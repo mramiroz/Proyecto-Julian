@@ -15,6 +15,15 @@ class SearchController extends Controller
             ->orWhere('descripcion', 'LIKE', "%$query%")
             ->orWhere('categoria', 'LIKE', "%$query%")
             ->paginate(10);
-        return view('productos.cards', ['productos' => $productos, 'categorias' => $categorias])->render();
+        return view('productos.index', ['productos' => $productos, 'categorias' => $categorias])->render();
+    }
+    public function autocomplete(Request $request)
+    {
+        $query = $request->get('query');
+        $productos = Producto::where('nombre', 'LIKE', "%$query%")
+            ->orWhere('descripcion', 'LIKE', "%$query%")
+            ->orWhere('categoria', 'LIKE', "%$query%")
+            ->get();
+        return response()->json($productos);
     }
 };
