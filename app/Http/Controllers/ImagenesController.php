@@ -11,7 +11,7 @@ class ImagenesController extends Controller
 
     public function show($filename)
     {
-        $path = storage_path('images/' . $filename);
+        $path = storage_path('/app/images/' . $filename);
 
         if (!file_exists($path)) {
             abort(404);

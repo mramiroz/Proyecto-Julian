@@ -52,5 +52,5 @@ Route::controller(SearchController::class)->group(function () {
     Route::get('/search', 'index')->name('search');
 });
 Route::controller(ImagenesController::class)->group(function () {
-    Route::get('/images/{filename}', 'ImagenesController@show');
+    Route::get('/images/{filename}', 'show');
 });

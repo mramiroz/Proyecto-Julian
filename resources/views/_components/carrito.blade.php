@@ -15,7 +15,7 @@
                         <input type="hidden" name="product_id" value="{{ $producto->id }}">
                         <div class="cantidad-input">
                             <label for="cantidad">Cantidad:</label>
-                            <input type="number" name="cantidad" class="input-cantidad" min="0">
+                            <input type="number" name="cantidad" class="input-cantidad" min="0" value="1">
                         </div>
                     </form>
                     <form action="/carrito/delete" method="POST">
