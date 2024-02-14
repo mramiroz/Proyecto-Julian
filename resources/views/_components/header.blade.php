@@ -5,7 +5,7 @@
         </section>
         <section id="utilidades">
             <a href="/carrito" id="carrito">Carrito (0)</a>
-            <a href="" id="perfil">Mi perfil</a>
+            <a href="/usuario/perfil" id="perfil">Mi perfil</a>
             <form id="busqueda-form" action="/search" method="get">
                 <div id="barra-buscador">
                     <label for="buscador">

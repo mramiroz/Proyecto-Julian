@@ -53,14 +53,18 @@ class UsuarioController extends Controller
             return redirect('/login');
         }
     }
+    public function logout(Request $request){
+        $request->session()->forget('usuario');
+        return redirect('/');
+    }
 
+    public function perfil(){
+        $usuario = session('usuario');
+        return view('usuario.perfil', ['usuario' => $usuario]);
+    }
     public function pagoRealizado(){
         return view('usuario.pagoRealizado');
     }
-    public function perfil(){
-        return view('usuario.perfil');
-    }
-
     public function login(){
         return view('usuario.login');
     }

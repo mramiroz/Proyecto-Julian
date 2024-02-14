@@ -30,5 +30,14 @@ class ProductoController extends Controller
         $categorias = ["alimentacion", "bebidas", "limpieza", "cuidado personal"];
         return view('productos.crear' , ['categorias' => $categorias]);
     }
+    public function edit($id){
+        $producto = Producto::find($id);
+        return view('productos.edit', ['producto' => $producto]);
+    }
+    public function editar()
+    {
+        $productos = Producto::all();
+        return view('productos.editar', ['productos' => $productos]);
+    }
 }
 
