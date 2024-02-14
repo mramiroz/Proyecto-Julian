@@ -7,4 +7,5 @@
         <input type="password" name="password" id="password">
         <br>
         <input type="submit" id="submit" value="Ingresar">
+        <input type="button" id="submit" value="Registrarse" onclick="location.href='/register';">
 </form>
