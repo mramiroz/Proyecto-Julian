@@ -4,7 +4,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    margin-left: 35%;
+    align-self: center;
 }
 #name, #password, #password-again, #email{
     width: 100%;

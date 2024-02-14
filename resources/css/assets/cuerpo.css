@@ -1,4 +1,5 @@
 html{
+    display: flex;
     padding: 0;
     margin: 0;
     min-width: 100%;
