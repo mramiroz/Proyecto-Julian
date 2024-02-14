@@ -8,6 +8,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\ImagenesController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\PagoController;
 use Illuminate\Support\Facades\Storage;
 /*
 |--------------------------------------------------------------------------
@@ -56,4 +57,11 @@ Route::controller(SearchController::class)->group(function () {
 });
 Route::controller(ImagenesController::class)->group(function () {
     Route::get('/images/{filename}', 'show');
+});
+
+Route::controller(PagoController::class)->group(function () {
+    Route::get('/pago', 'index')->name('pago.index');
+    Route::post('/pago', 'procesarPago');
+    Route::get('/pago/pagoRealizado', 'pagoRealizado')->name('pago.pagoRealizado');
+    Route::post('/pago/validarPago', 'validarPago')->name('pago.validarPago');
 });
