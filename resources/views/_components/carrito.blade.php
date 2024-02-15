@@ -37,5 +37,5 @@
         <h2 id="total-titulo">Total</h2>
         <p id="total-precio">{{round($total, 2)}}€</p>
     </section>
-    <button class="checkout">Ir al pago →</button>
+    <a href="{{ route('pago.index') }}" class="checkout">Ir al pago →</a>
 </article>

@@ -21,16 +21,14 @@ class PagoController extends Controller
 
         // Aquí es donde implementarías la lógica para procesar el pago con tu pasarela de pago.
 
-        return back()->with('success', 'Pago procesado exitosamente');
+        return redirect()->route('pago.pagoRealizado');
     }
     public function index()
     {
         return view('pago.pago');
     }
-    public function validarRealizado(Request $request)
+    public function devolverExito()
     {
-        // Aquí iría la lógica para procesar el pago
-
         return view('pago.pagoRealizado');
     }
 }
