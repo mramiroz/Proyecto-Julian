@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Models\Contiene;
 
 class PagoController extends Controller
 {
@@ -29,6 +30,8 @@ class PagoController extends Controller
     }
     public function devolverExito()
     {
+        $user = session("usuario.id");
+        Contiene::where("id_carrito", $user)->delete();
         return view('pago.pagoRealizado');
     }
 }

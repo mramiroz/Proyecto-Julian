@@ -59,8 +59,13 @@ class UsuarioController extends Controller
     }
 
     public function perfil(){
-        $usuario = session('usuario');
-        return view('usuario.perfil', ['usuario' => $usuario]);
+        if (!session('usuario')){
+            return redirect('/login');
+        }
+        else{
+            $usuario = session('usuario');
+            return view('usuario.perfil', ['usuario' => $usuario]);
+        }
     }
     public function pagoRealizado(){
         return view('usuario.pagoRealizado');
