@@ -6,7 +6,11 @@
     width: 300px;
     align-self: center;
 }
-#name, #password, #password-again, #email{
+#name,
+#password,
+#surnames,
+#email,
+#direccion {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
@@ -19,6 +23,13 @@
     background-color: #4caf50;
     color: white;
     cursor: pointer;
+    padding: 6px;
+}
+
+#botones-form {
+    border-style: none;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #submit:hover {
