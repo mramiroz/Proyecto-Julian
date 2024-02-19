@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use App\Models\Categoria;
 
 class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        $categorias = Producto::all();
+        $categorias = Categoria::all();
         $query = $request->get('query');
         $productos = Producto::where('nombre', 'LIKE', "%$query%")
             ->orWhere('descripcion', 'LIKE', "%$query%")
-            ->orWhere('categoria', 'LIKE', "%$query%")
             ->paginate(10);
         return view('productos.index', ['productos' => $productos, 'categorias' => $categorias])->render();
     }
@@ -22,7 +22,6 @@ class SearchController extends Controller
         $query = $request->get('query');
         $productos = Producto::where('nombre', 'LIKE', "%$query%")
             ->orWhere('descripcion', 'LIKE', "%$query%")
-            ->orWhere('categoria', 'LIKE', "%$query%")
             ->get();
         return response()->json($productos);
     }

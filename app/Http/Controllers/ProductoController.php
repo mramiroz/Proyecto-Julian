@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use App\Models\Categoria;
 
 class ProductoController extends Controller
 {
     public function index(){
         $productos = Producto::all();
-        return view('productos.index', ['productos' => $productos, 'categorias' => $productos]);
+        $categorias = Categoria::all();
+        return view('productos.index', ['productos' => $productos, 'categorias' => $categorias]);
     }
 
     public function create(Request $request){
@@ -22,12 +24,14 @@ class ProductoController extends Controller
         ]);
     }
     public function show($seccion){
-        $categorias = Producto::all();
-        $productos = Producto::all()->where('categoria', $seccion);
+        $categorias = Categoria::all();
+        $categoria = Categoria::where('route', $seccion)->first();
+        $idCategoria = $categoria->id;
+        $productos = Producto::all()->where('id_categoria', $idCategoria);
         return view('home', ['productos' => $productos, 'categorias' => $categorias]);
     }
     public function crear(){
-        $categorias = ["alimentacion", "bebidas", "limpieza", "cuidado personal"];
+        $categorias = Categoria::all();
         return view('productos.crear' , ['categorias' => $categorias]);
     }
     public function edit($id){
