@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\GestorController;
 use App\Http\Controllers\ImagenesController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\PagoController;
@@ -63,4 +64,14 @@ Route::controller(PagoController::class)->group(function () {
     Route::get('/pago', 'index')->name('pago.index');
     Route::post('/pago', 'procesarPago');
     Route::post('/pago/devolverExito', 'devolverExito')->name('pago.pagoRealizado');
+});
+
+Route::controller(GestorController::class)->group( function () {
+    Route::get('gestor', 'index')->name('gestor.index');
+    Route::get('gestor/crear', 'create')->name('gestor.create');
+    Route::get('gestor/crear', 'store')->name('gestor.store');
+    Route::get('gestor/update/{id}', 'update')->name('gestor.update');
+    Route::get('gestor/ver/{id}', 'show')->name('gestor.show');
+    Route::get('gestor/editar/{id}', 'edit')->name('gestor.edit');
+    Route::get('gestor/eliminar/{id}', 'destroy')->name('gestor.destroy');
 });
