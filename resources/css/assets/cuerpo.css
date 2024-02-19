@@ -78,6 +78,10 @@ main {
     border-width: 2px;
 }
 
+.categoria-seleccionada {
+    background-color: rgb(249, 249, 215);
+}
+
 #perfil {
     text-decoration: none;
     color: black;
