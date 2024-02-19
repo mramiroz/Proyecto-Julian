@@ -23,6 +23,10 @@ header {
     font-size: larger;
 }
 
+.emoji {
+    font-family: "Noto Color Emoji", sans-serif;
+}
+
 #utilidades {
     display: flex;
     max-width: 100%;
