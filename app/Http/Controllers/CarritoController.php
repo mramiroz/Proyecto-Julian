@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Producto;
 use App\Models\Carrito;
 use App\Models\Contiene;
@@ -21,7 +22,7 @@ class CarritoController extends Controller
         }
     }
     public function delete(Request $request){
-        $userId = session('usuario.id');
+        $userId = Auth::id();
         $carrito = Carrito::where('id_usuario', $userId)->first();
         $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $request->product_id)->first();
         $contiene->delete();
@@ -29,12 +30,12 @@ class CarritoController extends Controller
 
     public function addCarrito(Request $request)
     {
-        if  (!session('usuario'))
+        if  (!Auth::check())
         {
             return redirect('/login');
         }
         else{
-            $userId = session('usuario.id');
+            $userId = Auth::id();
             $carrito = Carrito::where('id_usuario', $userId)->first();
             $product = Producto::find($request->product_id);
             $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $product->id)->first();
@@ -54,11 +55,11 @@ class CarritoController extends Controller
     }
 
     public function index(){
-        if (!session ('usuario')){
+        if (!Auth::check()){
             return redirect('/login');
         }
         else{
-            $userId = session('usuario.id');
+            $userId = Auth::id();
             $carrito = Carrito::where('id_usuario', $userId)->first();
             $contiene = Contiene::where('id_carrito', $carrito->id)->get();
 
@@ -79,7 +80,7 @@ class CarritoController extends Controller
 
     public function getCount()
     {
-        $usuarioId = session('usuario.id');
+        $usuarioId = Auth::id();
         $count = DB::table('contiene')->where('id_carrito', $usuarioId)->count();
         return response()->json(['count' => $count]);
     }

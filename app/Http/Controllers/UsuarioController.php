@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Usuario;
 use App\Models\Carrito;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UsuarioController extends Controller
 {
@@ -38,32 +39,26 @@ class UsuarioController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-        $usuario = Usuario::where('email', $request->email)->first();
-        if($usuario){
-            if(Hash::check($request->password, $usuario->password)){
-                if ($request->session()->has('usuario')){
-                    $request->session()->forget('usuario');
-                }
-                $request->session()->put('usuario', $usuario);
-                return redirect('/');
-            }else{
-                return redirect('/login');
-            }
-        }else{
+
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            return redirect('/');
+        } else {
             return redirect('/login');
         }
     }
     public function logout(Request $request){
-        $request->session()->forget('usuario');
+        Auth::logout();
         return redirect('/');
     }
 
     public function perfil(){
-        if (!session('usuario')){
+        if (!Auth::check()){
             return redirect('/login');
         }
         else{
-            $usuario = session('usuario');
+            $usuario = Auth::user();
             return view('usuario.perfil', ['usuario' => $usuario]);
         }
     }

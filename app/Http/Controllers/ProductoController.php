@@ -28,7 +28,7 @@ class ProductoController extends Controller
         $categoria = Categoria::where('route', $seccion)->first();
         $idCategoria = $categoria->id;
         $productos = Producto::all()->where('id_categoria', $idCategoria);
-        return view('home', ['productos' => $productos, 'categorias' => $categorias]);
+        return view('productos.index', ['productos' => $productos, 'categoria' => $categoria, 'categorias' => $categorias]);
     }
     public function crear(){
         $categorias = Categoria::all();

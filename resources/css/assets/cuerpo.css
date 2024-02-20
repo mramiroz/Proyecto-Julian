@@ -17,6 +17,8 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding-left: 10dvh;
     padding-right: 10dvh;
