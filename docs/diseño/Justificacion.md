@@ -1,6 +1,6 @@
 # Justificación de la solución
 
-**Comodidad:**
+1. **Comodidad:**
    - Puedes comprar desde casa sin tener que salir.
 
 2. **Ayudar a Todos:**

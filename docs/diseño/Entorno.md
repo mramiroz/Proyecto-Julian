@@ -23,7 +23,6 @@ Para el diagramado usamos Plantuml escrito en archivos markdown o Lucidspark seg
 En cuanto al prototipado hemos optado por hacerlo en alto nivel, por eso hemos elegido usar Figma, una aplicación web que nos permite diseñar las pantallas con relativa falicidad y en un espacio de trabajo compartido.
 
 ## 2 Definición del entorno / Automatización
-## 2 Definición del entorno / Automatización
 ### 2.1 **Entornos**
 Utilizaremos **git y git flow** para el control de versiones y estar interactuando con **Git Hub** donde estaremos actualizando los avances del proyecto.
 Como IDE principal utilizaremos **Visual Studio Code:**  que nos ayuda mucho con la organización de ficheros, en nuestra edición de codigo fuente, en depuraciones y añadir nuestras extenciones.
@@ -32,7 +31,7 @@ Manejaremos nuestro proyecto a través del **Docker:** con el framework de **Lar
 
 Para gestionar nuestra Base de Datos utilizaremos **Postgress**.
 
-Para gestionar nuestra Vista y poner en funcionamiento de **Vite** utilizamos **Node.js** para ejecuat esto tenemos que ejecutar los siguientes comandos:
+Para gestionar nuestra Vista y poner en funcionamiento de **Vite** utilizamos **Node.js** para ejecutar esto tenemos que ejecutar los siguientes comandos:
 
 1. npm init vite
 2. npm install
