@@ -14,13 +14,13 @@ class Producto extends Model
     protected $fillable = [
         'nombre',
         'descripcion',
-        'categoria',
+        'id_categoria',
         'imagen',
         'importe'
     ];
     public function toSearchableArray()
     {
-        $array = $this->only('nombre', 'descripcion', 'categoria');
+        $array = $this->only('nombre', 'descripcion');
         return $array;
     }
 }

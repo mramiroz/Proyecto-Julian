@@ -22,5 +22,15 @@ class UserSeeder extends Seeder
             'password' => Hash::make('prueba')
         ]);
         $usuario->carrito()->create([]);
+
+        $usuario = Usuario::create([
+            'nombre' => 'admin',
+            'apellidos' =>'admin',
+            'direccion' => 'admin',
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('admin'),
+            'tipo' => 'admin'
+        ]);
+        $usuario->carrito()->create([]);
     }
 }

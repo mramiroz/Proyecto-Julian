@@ -7,9 +7,8 @@
             </form>
         </div>
         @if(isset($productos) && count($productos) > 0)
-            <ul>
                 @foreach($productos as $producto)
-                    <li>
+                    <div>
                         <img src="{{ $producto->imagen }}" alt="{{ $producto->nombre }}" style="width: 100px; height: 100px;">
                         {{ $producto->nombre }}
                         <a href="{{ route('gestor.edit', $producto->id) }}" class="btn btn-primary">Editar</a>
@@ -18,9 +17,8 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" style="background-color: red;">Eliminar</button>
                         </form>
-                    </li>
+                    </div>
                 @endforeach
-            </ul>
         @endif
     </div>
 </div>

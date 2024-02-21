@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use App\Models\Categoria;
 
-class GestorController extends Controller
+class AdminController extends Controller
 {
     public function index()
     {
         $productos = Producto::all();
-        return view('Gestor.plantillaGestor', compact('productos'));
+        return view('Gestor.index', compact('productos'));
     }
 
     public function create()
     {
-        return redirect()->route('gestor.index');
+        return view('Gestor.add', ['categorias' => Categoria::all()]);
     }
 
     public function store(Request $request)
@@ -32,7 +33,8 @@ class GestorController extends Controller
     public function edit($id)
     {
         $producto = Producto::findOrFail($id);
-        return view('plantillaGestor', compact('producto'));
+        $categorias = Categoria::all();
+        return view('Gestor.update', compact('producto'), compact('categorias'));
     }
 
     public function update(Request $request, $id)

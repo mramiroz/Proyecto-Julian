@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CarritoController;
-use App\Http\Controllers\GestorController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ImagenesController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\PagoController;
@@ -65,12 +65,13 @@ Route::controller(PagoController::class)->group(function () {
     Route::post('/pago', 'procesarPago');
     Route::post('/pago/devolverExito', 'devolverExito')->name('pago.pagoRealizado');
 });
-Route::middleware('admin')->group(function () {
-    Route::get('gestor', 'GestorController@index')->name('gestor.index');
-    Route::get('gestor/crear', 'GestorController@create')->name('gestor.create');
-    Route::post('gestor/store', 'GestorController@store')->name('gestor.store');
-    Route::put('gestor/update/{id}', 'GestorController@update')->name('gestor.update');
-    Route::get('gestor/ver/{id}', 'GestorController@show')->name('gestor.show');
-    Route::get('gestor/editar/{id}', 'GestorController@edit')->name('gestor.edit');
-    Route::delete('gestor/eliminar/{id}', 'GestorController@destroy')->name('gestor.destroy');
+
+Route::controller(AdminController::class)->group(function (){
+    Route::get('gestor', 'index')->name('gestor.index')->middleware('admin');
+    Route::get('gestor/create', 'create')->name('gestor.create')->middleware('admin');
+    Route::post('gestor/store', 'store')->name('gestor.store')->middleware('admin');
+    Route::put('gestor/update/{id}', 'update')->name('gestor.update')->middleware('admin');
+    Route::get('gestor/show/{id}', 'show')->name('gestor.show')->middleware('admin');
+    Route::get('gestor/edit/{id}', 'edit')->name('gestor.edit')->middleware('admin');
+    Route::delete('gestor/destroy/{id}', 'destroy')->name('gestor.destroy')->middleware('admin');
 });

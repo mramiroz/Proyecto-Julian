@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nombre')->unique();
             $table->string('descripcion')->nulleable();
             $table->unsignedBigInteger('id_categoria')->constrained('categorias');
-            $table->string('imagen');
+            $table->string('imagen')->default('https://ucarecdn.com/4ef09f9a-faee-4844-b1a2-3ff0bf6db684/default.jpeg');
             $table->double('importe');
             $table->timestamps();
 
