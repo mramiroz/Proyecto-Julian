@@ -25,4 +25,9 @@ class Usuario extends Authenticatable
     {
         return $this->hasOne(Carrito::class, 'id_usuario');
     }
+
+    public function isAdmin()
+    {
+        return $this->tipo === 'admin';
+    }
 }
