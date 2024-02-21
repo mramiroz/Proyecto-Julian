@@ -48,5 +48,5 @@ class GestorController extends Controller
         $producto->delete();
         return redirect()->route('gestor.index');
     }
-    
+
 }

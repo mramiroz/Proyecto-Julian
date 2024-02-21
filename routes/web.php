@@ -68,8 +68,8 @@ Route::controller(PagoController::class)->group(function () {
 
 Route::controller(GestorController::class)->group( function () {
     Route::get('gestor', 'index')->name('gestor.index');
-    Route::get('gestor/crear', 'create')->name('gestor.create');
-    Route::get('gestor/crear', 'store')->name('gestor.store');
+    Route::get('gestor/crear', 'GestorController@create')->name('gestor.create');
+    Route::get('gestor/store', 'store')->name('gestor.store');
     Route::get('gestor/update/{id}', 'update')->name('gestor.update');
     Route::get('gestor/ver/{id}', 'show')->name('gestor.show');
     Route::get('gestor/editar/{id}', 'edit')->name('gestor.edit');
