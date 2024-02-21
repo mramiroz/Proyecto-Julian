@@ -1,7 +1,7 @@
 <section id="productos-expuestos">
     <header id="productos-expuestos-cabecera">
         @if(isset($categoria))
-            <h1>Algunos de nuestros productos categoria "{{$categoria->nombre}}"</h1>
+            <h1>Algunos de nuestros productos de "{{$categoria->nombre}}"</h1>
         @else
             <h1>Algunos de nuestros productos</h1>
         @endif

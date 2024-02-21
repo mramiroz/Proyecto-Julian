@@ -22,7 +22,7 @@ class CategoriasSeader extends Seeder
             "route" => 'bebidas'
         ]);
         Categoria::create([
-            "nombre" => "Cuidado Personal",
+            "nombre" => "Cuidado personal",
             "route" => 'cuidado-personal'
         ]);
         Categoria::create([
