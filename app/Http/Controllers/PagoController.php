@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Contiene;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Ticket;
 
 class PagoController extends Controller
 {
@@ -29,6 +30,17 @@ class PagoController extends Controller
     {
         return view('pago.pago');
     }
+    public function createTicket(Request $request)
+{
+    $request->validate([
+        'title' => 'required|max:255',
+        'description' => 'required',
+        'status' => 'required|in:open,closed',
+    ]);
+
+    $ticket = Ticket::create($request->all());
+    return redirect()->route('tickets.show', $ticket);
+}
     public function devolverExito()
     {
         $user = Auth::id();
