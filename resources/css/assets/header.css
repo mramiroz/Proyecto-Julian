@@ -16,7 +16,14 @@ header {
 }
 
 
-
+.user_button{
+    background-color: #66aa2b;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .marca {
     font-family: 'Pacifico', cursive;
     color: rgb(102, 170, 43);
@@ -53,19 +60,12 @@ header {
     min-width: min-content;
 }
 
-#carrito {
-    order: 1;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(102, 170, 43);
-    padding: 8px 16px;
-    min-width: min-content;
-}
 
 #busqueda-form {
     order: 3;
     display: flex;
     min-width: min-content;
+    width: 400px;
 }
 
 #barra-buscador {

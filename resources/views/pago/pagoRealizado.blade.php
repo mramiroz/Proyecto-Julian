@@ -3,5 +3,5 @@
     @include('_components.header')
 @endsection
 @section('content')
-    @include('_components.pagoRealizado')
+    @include('_components.ticket')
 @endsection
