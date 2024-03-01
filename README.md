@@ -30,6 +30,10 @@ Contiene la documentación de diseño del proyecto. En la carpeta Diseño.
 
 En proyecto.md está el índice.
 
+### Otros
+
+Contiene documentos MUY utiles para los miembros del equipo, entre ellos encontramos las convenciones de nombrado del proyecto y la guía de instalación del mismo. **En caso de duda de que el proyecto no funcione recomendamos revisar la GuiaInstalacion.pdf.**
+
 ---
 
 ## Como hacer funcionar los estilos de la aplicación.
