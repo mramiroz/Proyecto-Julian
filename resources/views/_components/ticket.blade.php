@@ -6,15 +6,17 @@
         <p>Descripcion: </p>
         <ul>
             @foreach($productos as $producto)
+                @php
+                    $contieneProducto = $contiene->firstWhere('id_producto', $producto->id);
+                @endphp
                 <li>
                     <p>{{$producto->nombre}}</p>
-                    <p>{{$producto->precio}}</p>
-                    <p>{{$producto->cantidad}}</p>
-                    <p>{{$producto->total}}</p>
+                    <p>Precio unitario: {{$producto->importe}}</p>
+                    <p>Cantidad: {{ $contieneProducto->cantidad }}</p>
+                    <p>Total: {{$producto->importe * $contieneProducto->cantidad}}</p>
                 </li>
             @endforeach
         </ul>
         <p>Total: {{ $carrito->total}}</p>
     </div>
-    <a href="{{route('home')}}">Finalizar</a>
-
+<a href="{{route('pago.devolverExito')}}">Finalizar</a>

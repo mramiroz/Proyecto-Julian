@@ -1,4 +1,4 @@
-<form id="payment-form" action="{{ route('pago.pagoRealizado') }}" method="POST">
+<form id="payment-form" action="{{ route('pago.procesarPago') }}" method="POST">
     @csrf
     <div class="form-group">
         <label for="cardholder-name">Nombre del titular de la tarjeta</label>

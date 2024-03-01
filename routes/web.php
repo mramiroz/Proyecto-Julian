@@ -62,8 +62,8 @@ Route::controller(ImagenesController::class)->group(function () {
 
 Route::controller(PagoController::class)->group(function () {
     Route::get('/pago', 'index')->name('pago.index');
-    Route::post('/pago', 'procesarPago');
-    Route::post('/pago/devolverExito', 'createTicket')->name('pago.pagoRealizado');
+    Route::post('/pago', 'procesarPago')->name('pago.procesarPago');
+    Route::get('/pago/devolverExito', 'devolverExito')->name('pago.devolverExito');
 });
 
 Route::controller(AdminController::class)->group(function (){

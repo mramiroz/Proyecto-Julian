@@ -25,6 +25,8 @@ class CarritoController extends Controller
         $userId = Auth::id();
         $carrito = Carrito::where('id_usuario', $userId)->first();
         $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $request->product_id)->first();
+        $carrito->total = $carrito->total - ($contiene->cantidad * $contiene->producto->importe);
+        $carrito->save();
         $contiene->delete();
     }
 
@@ -41,7 +43,9 @@ class CarritoController extends Controller
             $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $product->id)->first();
             if ($contiene){
                 $contiene->cantidad += 1;
+                $carrito->total = $carrito->total + $product->importe;
                 $contiene->save();
+                $carrito->save();
             }
             else {
                 Contiene::create([
@@ -49,6 +53,8 @@ class CarritoController extends Controller
                     'id_producto' => $product->id,
                     'cantidad' => 1
                 ]);
+                $carrito->total = $carrito->total + $product->importe;
+                $carrito->save();
             }
         }
 
@@ -62,7 +68,6 @@ class CarritoController extends Controller
             $userId = Auth::id();
             $carrito = Carrito::where('id_usuario', $userId)->first();
             $contiene = Contiene::where('id_carrito', $carrito->id)->get();
-
             $total = 0;
             $productos = [];
             foreach ($contiene as $c) {
