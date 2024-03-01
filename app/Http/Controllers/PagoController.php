@@ -30,17 +30,14 @@ class PagoController extends Controller
     {
         return view('pago.pago');
     }
-    public function createTicket(Request $request)
-{
-    $request->validate([
-        'title' => 'required|max:255',
-        'description' => 'required',
-        'status' => 'required|in:open,closed',
-    ]);
-
-    $ticket = Ticket::create($request->all());
-    return redirect()->route('tickets.show', $ticket);
-}
+    
+    public function createTicket()
+    {
+        $usuario = Auth::user();
+        $contiene = DB::table('contiene')->where('id_usuario', $usuario->id);
+        $carrito = DB::table('carrito')->find('id', $usuario->id)->first();
+        return view('pago.ticket', ['usuario' => $usuario, 'productos' => $productos, 'carrito' => $carrito, 'contiene' => $contiene]);
+    }
     public function devolverExito()
     {
         $user = Auth::id();

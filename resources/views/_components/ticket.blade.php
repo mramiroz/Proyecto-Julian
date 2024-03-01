@@ -1,11 +1,20 @@
-<h1>Ticket Details</h1>
-
+<h1>Ticket Detalle/h1>
     <div>
-        <h2>Ticket ID: {{ $ticket->id }}</h2>
-        <p>Title: {{ $ticket->title }}</p>
-        <p>Description: {{ $ticket->description }}</p>
-        <p>Status: {{ $ticket->status }}</p>
-        <p>Purchase Date: {{ $ticket->created_at }}</p>
+        <h2>Ticket</h2>
+        <p>Nombre:{{ $usuario->nombre}} {{$usuario->apellidos}}</p>
+        <p>Direccion: {{ $usuario->direccion }}</p>
+        <p>Descripcion: </p>
+        <ul>
+            @foreach($productos as $producto)
+                <li>
+                    <p>{{$producto->nombre}}</p>
+                    <p>{{$producto->precio}}</p>
+                    <p>{{$producto->cantidad}}</p>
+                    <p>{{$producto->total}}</p>
+                </li>
+            @endforeach
+        </ul>
+        <p>Total: {{ $ticket->created_at }}</p>
     </div>
-
-    <a href="{{ route('tickets.index') }}">Back to tickets list</a>
+    <a href="{{route('home')}}">Finalizar</a>
+    
