@@ -25,7 +25,8 @@ class CarritoController extends Controller
         $userId = Auth::id();
         $carrito = Carrito::where('id_usuario', $userId)->first();
         $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $request->product_id)->first();
-        $carrito->total = $carrito->total - ($contiene->cantidad * $contiene->producto->importe);
+        $producto = Producto::find($request->product_id);
+        $carrito->total = $carrito->total - ($contiene->cantidad * $producto->importe);
         $carrito->save();
         $contiene->delete();
     }
