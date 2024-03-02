@@ -5,14 +5,14 @@
         </section>
         <section id="utilidades">
             @if(Auth::check())
-            <a href="/carrito" id="carrito" class="user_button">Carrito (0)</a>
+            <a href="/carrito" id="carrito" class="user-button">Carrito (0)</a>
             <a href="/usuario/perfil" id="perfil">Mi perfil</a>
             @if(Auth::user()->tipo == 'admin')
             <a href="/gestor" class="user_button">Admin</a>
             @endif
             @else
-            <a href="/login" class="user_button">Iniciar sesión</a>
-            <a href="/register" class="user_button">Registrarse</a>
+            <a href="/login" class="user-button">Iniciar sesión</a>
+            <a href="/register" class="user-button">Registrarse</a>
             @endif
             <form id="busqueda-form" action="/search" method="get">
                 <div id="barra-buscador">

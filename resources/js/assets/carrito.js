@@ -2,6 +2,7 @@
 $(document).ready(function() {
     $('.input-cantidad').on('input', function(){
         var product_id = $(this).parent().siblings('input[name="product_id"]').val();
+        var total = $(this).parent().siblings('input[name="total"]').val();
         var cantidad = $(this).val();
         console
         $.ajax({
@@ -10,10 +11,11 @@ $(document).ready(function() {
             data: {
                 "_token": $('meta[name="csrf-token"]').attr('content'),
                 id_producto: product_id,
-                cantidad: cantidad
+                cantidad: cantidad,
+                total: total
             },
             success: function(response){
-                $('#total-precio').text(response.newTotal + '€');
+                location.reload();
             }
         });
     });

@@ -78,7 +78,9 @@ class CarritoController extends Controller
                 $total += $importe * $cantidad;
                 array_push($productos, $producto);
             }
-            return view('carrito.index', ['productos' => $productos, 'total' => $total]);
+            $carrito->total = $total;
+            $carrito->save();
+            return view('carrito.index', ['productos' => $productos, 'total' => $total, "contiene" => $contiene]);
         }
     }
 
@@ -92,7 +94,11 @@ class CarritoController extends Controller
 
     public function updateTotal(Request $request){
         $producto = Producto::find($request->id_producto);
-        $newTotal = $producto->importe * $request->cantidad;
-        return response()->json(['newTotal' => $newTotal]);
+        $contiene = Contiene::where('id_producto', $producto->id)->first();
+        $carrito = Carrito::where('id', $contiene->id_carrito)->first();
+        $contiene->cantidad = $request->cantidad;
+        $carrito->save();
+        $contiene->save();
+        return response()->json(['newTotal' => $carrito->total]);
     }
 }

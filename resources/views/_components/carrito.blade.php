@@ -2,6 +2,9 @@
     <h2 id="titulo">Carrito</h2>
     <section>
         @foreach($productos as $producto)
+        @php
+        $contieneProducto = $contiene->firstWhere('id_producto', $producto->id);
+        @endphp
         <article class="productos-carrito-tarjeta">
             <section class="producto-info">
                 <figure class="figure-producto-cart">
@@ -9,13 +12,14 @@
                 </figure>
                 <div>
                     <h2 id="nombre-producto">{{$producto->nombre}}</h2>
-                    <p class="precio">{{$producto->importe}}€/l</p>
+                    <p class="precio">{{$producto->importe}}€</p>
                     <form action="" method="POST">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $producto->id }}">
+                        <input type="hidden" name="total" value="{{ $total }}">
                         <div class="cantidad-input">
                             <label for="cantidad">Cantidad:</label>
-                            <input type="number" name="cantidad" class="input-cantidad" min="0" value="1">
+                            <input type="number" name="cantidad" class="input-cantidad" min="0" value="{{$contieneProducto->cantidad}}">
                         </div>
                     </form>
                     <form action="/carrito/delete" method="POST">

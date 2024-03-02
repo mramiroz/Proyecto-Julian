@@ -16,13 +16,16 @@ header {
 }
 
 
-.user_button{
+.user-button{
     background-color: #66aa2b;
     text-decoration: none;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+.user-button:hover{
+    background-color: #4d7f1b;
 }
 .marca {
     font-family: 'Pacifico', cursive;
