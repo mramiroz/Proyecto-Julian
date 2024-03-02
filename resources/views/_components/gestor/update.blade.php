@@ -6,7 +6,7 @@
     <label for="description">Descripción del producto</label>
     <input type="text" name="descripcion" value="{{ $producto->descripcion }}">
     <label for="imagen">Imagen del producto</label>
-    <input type="text" name="img" value="{{ $producto->imagen }}">
+    <input type="text" name="imagen" value="{{ $producto->imagen }}">
     <select name="id_categoria">
         @foreach($categorias as $categoria)
             <option value="{{ $categoria->id }}" @if($categoria->id == $producto->categoria_id) selected @endif>{{ $categoria->nombre }}</option>

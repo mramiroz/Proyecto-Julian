@@ -5,7 +5,7 @@
     <label for="description">Descripción del producto</label>
     <input type="text" name="descripcion">
     <label for="imagen">Imagen del producto</label>
-    <input type="text" name="img">
+    <input type="text" name="imagen">
     <select name="id_categoria">
         @foreach($categorias as $categoria)
             <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
