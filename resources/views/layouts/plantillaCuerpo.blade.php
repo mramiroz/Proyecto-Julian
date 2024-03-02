@@ -4,18 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/css/assets/footer.css'])
-    @vite(['resources/css/assets/header.css'])
-    @vite(['resources/css/assets/cuerpo.css'])
-    @vite(['resources/css/assets/pagoRealizado.css'])
-    @vite(['resources/css/assets/perfil.css'])
-    @vite(['resources/css/assets/carrito.css'])
-    @vite(['resources/css/assets/login.css'])
-    @vite(['resources/css/assets/register.css'])
-    @vite(['resources/css/assets/pago.css'])
-    @vite(['resources/js/assets/header.js'])
-    @vite(['resources/js/assets/carrito.js'])
-    @vite(['resources/js/assets/pago.js'])
+    @vite(['resources/css/app.css'])
+    @vite(['resources/js/app.js'])
     @yield('styles')
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('Tiernocado')</title>
