@@ -22,16 +22,20 @@ class UsuarioController extends Controller
             'password' => 'required',
         ]);
 
-        $usuario = Usuario::create([
-            'nombre' => $request->nombre,
-            'apellidos' => $request->apellidos,
-            'direccion' => $request->direccion,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
-        $usuario->carrito()->create([]);
-
-        return redirect('/login');
+        if (Usuario::where('email', $request->email)->exists()){
+            return redirect('/register');
+        }
+        else{
+            $usuario = Usuario::create([
+                'nombre' => $request->nombre,
+                'apellidos' => $request->apellidos,
+                'direccion' => $request->direccion,
+                'email' => $request->email,
+                'password' => Hash::make($request->password)
+            ]);
+            $usuario->carrito()->create([]);
+            return redirect('/login');
+        }
     }
 
     public function validarUsuario(Request $request){
