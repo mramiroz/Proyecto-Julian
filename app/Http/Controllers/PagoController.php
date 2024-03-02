@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Models\Contiene;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+
+use App\Models\Contiene;
+use App\Models\Ticket;
+use App\Models\Producto;
+use App\Models\Carrito;
 
 class PagoController extends Controller
 {
@@ -21,9 +26,16 @@ class PagoController extends Controller
         Log::info('Fecha de vencimiento: ' . $fechaVencimiento);
         Log::info('CVC: ' . $cvc);
 
-        // Aquí es donde implementarías la lógica para procesar el pago con tu pasarela de pago.
+        $usuario = Auth::user();
+        $contiene = DB::table('contiene')->where('id_carrito', $usuario->id)->get();
+        $carrito = DB::table('carritos')->where('id_usuario', $usuario->id)->first();
+        $productos = [];
+        foreach ($contiene as $c) {
+            $producto = Producto::find($c->id_producto);
+            array_push($productos, $producto);
+        }
 
-        return redirect()->route('pago.pagoRealizado');
+        return view('pago.pagoRealizado', ['usuario' => $usuario, 'carrito' => $carrito, 'contiene' => $contiene, 'productos' => $productos]);
     }
     public function index()
     {
@@ -31,8 +43,11 @@ class PagoController extends Controller
     }
     public function devolverExito()
     {
-        $user = Auth::id();
-        Contiene::where("id_carrito", $user)->delete();
-        return view('pago.pagoRealizado');
+        $usuario = Auth::user();
+        $carrito = Carrito::where('id_usuario', $usuario->id)->first();
+        Contiene::where("id_carrito", $usuario->id)->delete();
+        $carrito->total = 0;
+        $carrito->save();
+        return redirect()->route('home');
     }
 }

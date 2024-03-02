@@ -4,8 +4,16 @@
             <a href="/" class="marca" id="marca-superior">Tiernocado</a>
         </section>
         <section id="utilidades">
-            <a href="/carrito" id="carrito">Carrito (0)</a>
+            @if(Auth::check())
+            <a href="/carrito" id="carrito" class="user-button">Carrito (0)</a>
             <a href="/usuario/perfil" id="perfil">Mi perfil</a>
+            @if(Auth::user()->tipo == 'admin')
+            <a href="/gestor" class="user_button">Admin</a>
+            @endif
+            @else
+            <a href="/login" class="user-button">Iniciar sesión</a>
+            <a href="/register" class="user-button">Registrarse</a>
+            @endif
             <form id="busqueda-form" action="/search" method="get">
                 <div id="barra-buscador">
                     <label for="buscador">

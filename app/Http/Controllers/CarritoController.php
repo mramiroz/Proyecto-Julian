@@ -25,6 +25,8 @@ class CarritoController extends Controller
         $userId = Auth::id();
         $carrito = Carrito::where('id_usuario', $userId)->first();
         $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $request->product_id)->first();
+        $carrito->total = $carrito->total - ($contiene->cantidad * $contiene->producto->importe);
+        $carrito->save();
         $contiene->delete();
     }
 
@@ -41,7 +43,9 @@ class CarritoController extends Controller
             $contiene = Contiene::where('id_carrito', $carrito->id)->where('id_producto', $product->id)->first();
             if ($contiene){
                 $contiene->cantidad += 1;
+                $carrito->total = $carrito->total + $product->importe;
                 $contiene->save();
+                $carrito->save();
             }
             else {
                 Contiene::create([
@@ -49,6 +53,8 @@ class CarritoController extends Controller
                     'id_producto' => $product->id,
                     'cantidad' => 1
                 ]);
+                $carrito->total = $carrito->total + $product->importe;
+                $carrito->save();
             }
         }
 
@@ -62,7 +68,6 @@ class CarritoController extends Controller
             $userId = Auth::id();
             $carrito = Carrito::where('id_usuario', $userId)->first();
             $contiene = Contiene::where('id_carrito', $carrito->id)->get();
-
             $total = 0;
             $productos = [];
             foreach ($contiene as $c) {
@@ -73,7 +78,9 @@ class CarritoController extends Controller
                 $total += $importe * $cantidad;
                 array_push($productos, $producto);
             }
-            return view('carrito.index', ['productos' => $productos, 'total' => $total]);
+            $carrito->total = $total;
+            $carrito->save();
+            return view('carrito.index', ['productos' => $productos, 'total' => $total, "contiene" => $contiene]);
         }
     }
 
@@ -87,7 +94,11 @@ class CarritoController extends Controller
 
     public function updateTotal(Request $request){
         $producto = Producto::find($request->id_producto);
-        $newTotal = $producto->importe * $request->cantidad;
-        return response()->json(['newTotal' => $newTotal]);
+        $contiene = Contiene::where('id_producto', $producto->id)->first();
+        $carrito = Carrito::where('id', $contiene->id_carrito)->first();
+        $contiene->cantidad = $request->cantidad;
+        $carrito->save();
+        $contiene->save();
+        return response()->json(['newTotal' => $carrito->total]);
     }
 }
