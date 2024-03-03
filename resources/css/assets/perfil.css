@@ -52,7 +52,8 @@
     margin-top: 10px;
     padding: 10px 20px;
     border-radius: 10px;
+    cursor: pointer;
   }
   .logout:hover{
-    background-color: #fb4747;
+    box-shadow: 0 0 10px 0 red;
   }

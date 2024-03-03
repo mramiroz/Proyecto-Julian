@@ -5,7 +5,7 @@
   <input type="text" id="new-name" placeholder="Nuevo nombre">
   <button onclick="changeUsername()">Cambiar nombre</button>
 
-  <label for="password">Contraseña : <span id="password">{{$usuario->password}}</span></label>
+  <label for="password">Contraseña : </label>
   <input type="password" id="new-password" placeholder="Nueva contraseña">
   <button onclick="changePassword()">Cambiar contraseña</button>
 

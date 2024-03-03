@@ -6,7 +6,7 @@
     <div class="info-producto">
         <h2>{{$producto->nombre}}</h2>
         <h6 class="id">id: {{$producto->id}}</h6>
-        <p class="precio">{{$producto->importe}}€/l</p>
+        <p class="precio">{{$producto->importe}} €</p>
         <form id="form-{{ $producto->id}}" action="{{ route('carrito.add') }}" method="POST">
             @csrf
             <input type="hidden" name="product_id" value="{{ $producto->id }}">
